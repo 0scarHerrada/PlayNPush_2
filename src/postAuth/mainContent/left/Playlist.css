@@ -1,0 +1,86 @@
+#playlist {
+    display: none;
+    background-color: white;
+    color: black;
+    opacity: 0.9;
+    height: 84%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 720px;
+}
+
+#playlist-section {
+    height: 12%;
+    width: 95%;
+    display: grid;
+    align-self: center;
+    font-size: 1rem;
+}
+
+#playlist-section input {
+    border-radius:2% / 15%;
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 1%;
+    box-shadow: 0 0 9px darkgray;
+}
+
+#playlist-section input:focus {
+    border: 1px solid #18ab29;
+    outline: 1px solid #18ab29;
+    box-shadow: 0 0 9px #18ab29;
+    font-size: 1.25rem;
+    border-radius: 3% / 30%;
+}
+
+#playlist-section label {
+    align-self: flex-end;
+    margin-bottom: 2%;
+}
+
+#sort-label {
+    height: 5%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#sort-section {
+    height: 75%;
+    width: 95%;
+    display: grid;
+    align-self: center;
+}
+
+#sort-section div {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    gap: 4%;
+}
+
+#sort-section div div{
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-label {
+    color: white;
+}
+
+select {
+    height: 50%;
+}
+
+.sort-order {
+    text-align: center;
+}
+
+
+
+
+
+
+
+

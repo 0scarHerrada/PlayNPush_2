@@ -1,0 +1,196 @@
+.pool {
+    border-radius: 5%;
+    height: 89%;
+    width: 99%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+}
+
+@media only screen and (max-width: 670px)  {
+    #id-pool ul {
+        grid-template:
+            "a a"
+            "b b"
+            "c c";
+    }
+}
+
+@media only screen and (min-width: 670px) and (max-width: 890px)  {
+    #id-pool ul {
+        grid-template:
+            "a a a"
+            "b b b"
+            "c c c";
+    }
+}
+
+@media only screen and (min-width: 890px) and (max-width: 1100px)  {
+    #id-pool ul {
+        grid-template:
+            "a a"
+            "b b"
+            "c c";
+    }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1440px)  {
+    #id-pool ul {
+        grid-template:
+            "a a a"
+            "b b b"
+            "c c c";
+    }
+}
+
+.pool ul {
+    border-radius: 3%;
+    padding: 2%;
+    background-color: white;
+    max-height: 750px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template:
+            "a a a a"
+            "b b b b"
+            "c c c c";
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: auto;
+}
+
+.pool ul li {
+    opacity: 0.9;
+    background-color: white;
+    box-shadow: 5px 5px 12px black;
+    border-radius: 5%;
+    border: 1px solid lightgray;
+    max-width: 235px;
+    max-height: 300px;
+    height:92%;
+    width: 90%;
+    color: black;
+    font-size: 1.05rem;
+    display: grid;
+    grid-template-rows: 5fr 2fr;
+    align-items: center;
+    padding: 1%;
+    justify-self: center;
+}
+
+.pool ul li:hover {
+    box-shadow: 3px 3px 8px #18ab29;
+}
+
+.music-card-image {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    justify-self: center;
+    align-self: flex-start;
+    margin-top: 5%;
+    overflow: hidden;
+    border-radius: 2.5%;
+}
+
+.music-card-buttons {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.music-card-image div span {
+    color: white;
+    cursor: pointer;
+}
+
+.music-card-buttons .playlist-add span {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border-bottom-right-radius: 20%;
+    padding-bottom: 3%;
+    font-size: 1.75rem;
+}
+
+.play-arrow-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-arrow-container span {
+    font-size: 3rem;
+    box-shadow: 0 0 20px black;
+    border-radius: 50%;
+    opacity: 0.5;
+    padding: 1%;
+}
+
+.card-image {
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.music-card-info {
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-card span {
+    align-self: center;
+}
+
+#info-div {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    white-space: nowrap;
+}
+
+#info-div p {
+    padding: 1%;
+    align-self: flex-start;
+}
+
+#popularity {
+    align-self: center;
+    justify-self: center;
+}
+
+#popularity span {
+    font-size: 1.5rem;
+    text-shadow: 0 0 3px lightgray, 0 0 3px lightgray;
+}
+
+#explicit {
+    align-self: center;
+    justify-self: center;
+}
+
+#explicit span {
+    color: #18ab29;
+    font-size: 1.5rem;
+    text-shadow: 0 0 3px lightgray, 0 0 3px lightgray;
+}
+
+.music-info {
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: flex-end;
+}
+
+
+span {
+    text-align: center;
+}
+

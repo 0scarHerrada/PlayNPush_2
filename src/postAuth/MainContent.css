@@ -1,0 +1,37 @@
+#main-content {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    align-items: center;
+}
+
+@media only screen and (max-width: 890px)  {
+    #main-content {
+        grid-template-columns: 1fr;
+        padding: 1%;
+    }
+}
+
+@media only screen and (min-width: 890px) and (max-width: 1100px)  {
+    #main-content {
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1760px){
+    #main-content {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+@media only screen and (min-width: 1765px) {
+    #post-auth {
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 560px) and (max-height: 256px) {
+    #main-content {
+        display: none;
+    }
+}

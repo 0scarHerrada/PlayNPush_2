@@ -1,0 +1,48 @@
+#right {
+    max-height: 850px;
+    height: 85%;
+    width: 85%;
+    background-color: white;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    gap: 1%;
+}
+
+.tabs {
+    display: none;
+}
+
+@media only screen and (max-width: 890px){
+    #right {
+        min-height: 700px;
+        height: 90%;
+    }
+    #tab-menu {
+        height: 6%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: flex-end;
+    }
+    .tablinks {
+        height: 95%;
+    }
+}
+
+@media only screen and (min-width: 890px) and (max-width: 1760px){
+    #right {
+        height: 90%;
+    }
+    #tab-menu {
+        height: 6%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-end;
+    }
+    .tablinks {
+        height: 95%;
+    }
+    #pool-tab {
+        display: none;
+    }
+}

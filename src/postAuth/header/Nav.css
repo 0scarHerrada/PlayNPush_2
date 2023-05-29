@@ -1,0 +1,174 @@
+nav {
+    height: 100%;
+    width: 95%;
+    display: grid;
+    align-self: center;
+
+}
+
+#mobile-nav {
+    display: none;
+}
+
+#non-mobile-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
+    align-items: center;
+}
+
+#non-mobile-nav li a {
+    color: black;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-shadow: 0 0 2px whitesmoke, 0 0 2px whitesmoke;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+a:active {
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-shadow: 0 0 1px #18ab29, 0 0 1px #18ab29;
+}
+
+#displayName {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    justify-items: center;
+}
+
+#profile {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+#profile-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    align-items: center;
+}
+
+#profile-container img {
+    max-width: 55%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    border:3px solid #18ab29;
+    box-shadow: 0 0 15px darkgray;
+    margin-bottom: -4%;
+}
+
+
+#profile-name {
+    font-size: 1.4rem;
+    justify-self: center;
+    align-self: center;
+    text-shadow: 0 0 3px lightgray, 0 0 3px lightgray;
+}
+
+.spotify {
+    height: 55%;
+    width: 55%;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.spotify:hover {
+    height: 65%;
+    width: 65%;
+}
+
+.spotify:active {
+    height: 45%;
+    width: 45%;
+}
+
+.spotify img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 600px)  {
+    #mini-spotify {
+        height: 90%;
+        width: 90%;
+    }
+    #profilename {
+        font-size: 1.2rem;
+        word-spacing: 5px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 890px) {
+    #mini-spotify {
+        height: 80%;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 890px) and (max-width: 1310px) {
+    #reg-spotify {
+        height: 70%;
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1310px) and (max-width: 1760px) {
+    #reg-spotify {
+        height: 60%;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 890px)  {
+    #mobile-nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
+        align-items: center;
+    }
+    #mini-player-button {
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+    }
+    #non-mobile-nav {
+        display: none;
+    }
+}
+
+.nav-mini-player {
+    display: none;
+}
+
+@media only screen and (max-width: 560px) and (max-height: 256px) {
+    #mobile-nav {
+        display: none;
+    }
+    #the-mini-player {
+        height: 196px;
+        width: 520px;
+        background-color: azure;
+        display: grid;
+        grid-template-columns: 1fr 2fr 6fr 1fr;
+        align-items: center;
+        padding: 1%;
+        justify-self: center;
+        align-self: center;
+    }
+}

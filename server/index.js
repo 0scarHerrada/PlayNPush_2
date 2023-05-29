@@ -1,7 +1,6 @@
 const express = require('express')
-const request = require('request');
 const dotenv = require('dotenv');
-
+let request = require('request');
 const port = 5000
 
 global.access_token = ''
@@ -27,7 +26,7 @@ var app = express();
 
 app.get('/auth/login', (req, res) => {
 
-  var scope = "streaming user-read-email user-read-private"
+  var scope = "user-read-email user-read-private streaming user-read-playback-state user-modify-playback-state"
   var state = generateRandomString(16);
 
   var auth_query_parameters = new URLSearchParams({
@@ -59,7 +58,7 @@ app.get('/auth/callback', (req, res) => {
     json: true
   };
 
-  request.post(authOptions, function(error, response, body) {
+  request.post('https://accounts.spotify.com/api/token', authOptions, function(error, response, body) {
     if (!error && response.statusCode === 200) {
       access_token = body.access_token;
       res.redirect('/')

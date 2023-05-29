@@ -1,0 +1,21 @@
+#middle {
+    max-height: 950px;
+    height: 95%;
+    width: 95%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1%;
+    justify-self: center;
+}
+
+#search-bar {
+    z-index: 2;
+}
+
+@media only screen and (max-width: 890px)  {
+    #middle {
+        display: none;
+    }
+}

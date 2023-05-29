@@ -1,0 +1,39 @@
+#save-button {
+    font-size: 4rem;
+    letter-spacing: 10px;
+    height: 14%;
+    width: 100%;
+    align-self: center;
+    opacity: 0.9;
+    border:2px solid #18ab29;
+    border-radius: 10% 30% 40% 90%;
+    box-shadow: 0 0 9px darkgray;
+    background-color: #44c767;
+    color: white;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    cursor: pointer;
+}
+
+#save-text {
+    text-shadow: 0 0 2px #18ab29, 0 0 2px #18ab29;
+}
+
+/*
+background-color:#44c767;
+border:2px solid #18ab29;
+ */
+
+#save-button:hover {
+    opacity: 0.8;
+    background-color: #18ab29;
+    border:2px solid #44c767;
+    box-shadow: 0 0 13px darkgray;
+}
+
+#save-button:active {
+    opacity: 1.0;
+    background-color: #18ab29;
+    border:2px solid #44c767;
+    box-shadow: 0 0 0 darkgray;
+}

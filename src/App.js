@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import WebPlayback from './WebPlayback'
-import Login from './Login'
-import './App.css';
+import './preAuth/Login.css';
+import './postAuth/PlayNPush.css';
+import PlayNPush from './postAuth/PlayNPush'
+import Login from './preAuth/Login'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <>
-        { (token === '') ? <Login/> : <WebPlayback token={token} /> }
+        { (token === '') ? <Login/> : <PlayNPush token={token} /> }
     </>
   );
 }
