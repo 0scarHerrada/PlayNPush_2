@@ -7,7 +7,6 @@ function Nav(props) {
     const [profileImg, setProfileImg] = useState("https://i.scdn.co/image/ab67616d00001e027dd26d4f61619a3745898807");
 
     useEffect(() => {
-
         async function fetchProfile(token) {
             const result = await fetch("https://api.spotify.com/v1/me", {
                 method: "GET", headers: { Authorization: `Bearer ${token}` }
@@ -21,7 +20,7 @@ function Nav(props) {
         }
 
         fetchProfile(props.token);
-    }, [])
+    }, [props.token])
 
 
 
@@ -62,11 +61,15 @@ function Nav(props) {
                 </li>
             </ul>
             <ul id='non-mobile-nav'>
-                <li>
-                    <a href='http://localhost:3000/?'>Mini Player</a>
+                <li id='reg-github' className='github'>
+                    <a href='https://github.com/0scarHerrada/PlayNPush_2'>
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt=""/>
+                    </a>
                 </li>
                 <li>
-                    <a href='http://localhost:3000/?'>Party</a>
+                    <a href='http://localhost:3000/?' onClick={() => {
+                        window.resizeTo(window.screen.availWidth / 2, window.screen.availHeight / 2);
+                    }}>Mini Player</a>
                 </li>
                 <li id='profile'>
                     <div id='profile-container'>
@@ -78,7 +81,9 @@ function Nav(props) {
                     <a href='http://localhost:3000/?'>Preferences</a>
                 </li>
                 <li id='reg-spotify' className='spotify'>
-                    <a href='http://localhost:3000/?'><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Black.png" alt=""/></a>
+                    <a href='https://open.spotify.com/'>
+                        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Black.png" alt=""/>
+                    </a>
                 </li>
             </ul>
         </nav>

@@ -7,19 +7,23 @@ function Playlist(props) {
     const getPlaylistName = (event) => {
         if (props.alpha_playlist.length > 0) {
             if (event.key === 'Enter') {
-                // 👇 Get input value
-                const betaName = event.target.value;
+                if (event.target.value.length > 0) {
+                    props.stage(true)
+                    props.save(false)
+                    // 👇 Get input value
+                    const betaName = event.target.value;
 
-                const trackDurations = props.alpha_playlist.map(track => track[6])
+                    const trackDurations = props.alpha_playlist.map(track => track[6])
 
-                const playlistDuration = trackDurations.reduce((accumulator, currentValue) => {
-                    return accumulator + currentValue
-                },0);
+                    const playlistDuration = trackDurations.reduce((accumulator, currentValue) => {
+                        return accumulator + currentValue
+                    },0);
 
-                const namedAlpha = props.alpha_playlist.map(track =>
-                    [...track, betaName, playlistDuration]
-                )
-                props.set_beta((prev) => [...prev, namedAlpha])
+                    const namedAlpha = props.alpha_playlist.map(track =>
+                        [...track, betaName, playlistDuration, 'false']
+                    )
+                    props.set_beta((prev) => [...prev, namedAlpha])
+                }
             }
         }
     }
@@ -27,7 +31,7 @@ function Playlist(props) {
     return (
         <div id='playlist'>
             <section id='playlist-section'>
-                <input onKeyUp={getPlaylistName} type="search" placeholder='Enter name...'/>
+                <input id='name-a-playlist' onKeyUp={getPlaylistName} type="search" placeholder='Enter name...'/>
             </section>
             <label id='sort-label' htmlFor="sort-select">Sort by:</label>
             <section id='sort-section'>

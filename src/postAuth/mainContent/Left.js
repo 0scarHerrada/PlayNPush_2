@@ -57,9 +57,10 @@ function Left(props) {
     return (
         <section id='left'>
             <Player token={props.token} alpha_playlist={alphaPlaylist} remove_from_alpha={props.remove_from_alpha}/>
-            <Playlist alpha_playlist={props.alpha_playlist}  add_to_alpha={props.add_to_alpha} set_beta={props.set_beta}/>
+            <Playlist alpha_playlist={props.alpha_playlist}  add_to_alpha={props.add_to_alpha} set_beta={props.set_beta}
+                      stage={setStaged} save={setSaving}/>
             <Save alpha_playlist={props.alpha_playlist} save={setSaving} stage={setStaged}/>
-            <Stage alpha_playlist={props.alpha_playlist} stage={setStaged} save={setSaving}/>
+            <Stage alpha_playlist={props.alpha_playlist} set_beta={props.set_beta} stage={setStaged} save={setSaving}/>
         </section>
     )
 }

@@ -6,13 +6,13 @@
 
 @media only screen and (min-width: 325px) {
     #post-auth {
-        background-color: greenyellow;
+        background-color: white;
     }
 }
 
 @media only screen and (min-width: 890px) {
     #post-auth {
-        background-color: crimson;
+        background-color: white;
     }
 }
 

@@ -36,7 +36,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 a:active {
@@ -89,17 +89,40 @@ a:active {
 }
 
 .spotify:hover {
-    height: 65%;
-    width: 65%;
+    height: 60%;
+    width: 60%;
 }
 
 .spotify:active {
-    height: 45%;
-    width: 45%;
+    height: 50%;
+    width: 50%;
 }
 
 .spotify img {
-    max-width: 100%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+}
+
+.github {
+    height: 55%;
+    width: 55%;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.github:hover {
+    height: 60%;
+    width: 60%;
+}
+
+.github:active {
+    height: 50%;
+    width: 50%;
+}
+
+.github img {
+    max-width: 35%;
     height: auto;
     display: block;
 }
