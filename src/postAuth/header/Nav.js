@@ -62,14 +62,12 @@ function Nav(props) {
             </ul>
             <ul id='non-mobile-nav'>
                 <li id='reg-github' className='github'>
-                    <a href='https://github.com/0scarHerrada/PlayNPush_2'>
+                    <a target="_blank"  href='https://github.com/0scarHerrada/PlayNPush_2'>
                         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt=""/>
                     </a>
                 </li>
-                <li>
-                    <a href='http://localhost:3000/?' onClick={() => {
-                        window.resizeTo(window.screen.availWidth / 2, window.screen.availHeight / 2);
-                    }}>Mini Player</a>
+                <li id='nb-1'>
+                    <span className="material-symbols-outlined">palette</span>
                 </li>
                 <li id='profile'>
                     <div id='profile-container'>
@@ -77,12 +75,12 @@ function Nav(props) {
                     </div>
                     <p id='profile-name'>{profileName}</p>
                 </li>
-                <li>
-                    <a href='http://localhost:3000/?'>Preferences</a>
+                <li id='nb-2'>
+                    <span className="material-symbols-outlined">routine</span>
                 </li>
                 <li id='reg-spotify' className='spotify'>
-                    <a href='https://open.spotify.com/'>
-                        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Black.png" alt=""/>
+                    <a target="_blank" href='https://open.spotify.com/'>
+                        <img id='nav-spotify-logo' src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Black.png" alt=""/>
                     </a>
                 </li>
             </ul>

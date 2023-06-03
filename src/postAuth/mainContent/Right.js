@@ -16,7 +16,7 @@ function Right(props) {
                 <button id='player-tab' className="tablinks" onClick="openElement(event, 'Player')">Player</button>
                 <button id='playlists-tab' className="tablinks" onClick="openElement(event, 'Playlists')">Playlists</button>
             </div>
-            <Mixer beta_playlist={props.beta_playlist} staged_finals={stagedFinals} set_staged_finals={setStagedFinals}/>
+            <Mixer beta_playlist={props.beta_playlist} set_beta={props.set_beta} staged_finals={stagedFinals} set_staged_finals={setStagedFinals}/>
             <Push token={props.token} staged_finals={stagedFinals}
                   user_id={userId} set_user_id={setUserId}/>
         </section>

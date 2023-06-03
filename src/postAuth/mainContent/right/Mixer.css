@@ -40,7 +40,7 @@
     opacity: 0.9;
     background-color: white;
     border: 1px darkgray solid;
-    border-radius: 5% / 25%;
+    border-radius: 1% / 10%;
     box-shadow: 0 2px 5px black;
     color: black;
     width: 95%;
@@ -125,4 +125,32 @@ form {
 
 .hidden-final-playlist {
     visibility: hidden;
+}
+
+#mixer ul .clear {
+    cursor: pointer;
+    background-color: indianred;
+}
+
+#mixer ul .clear:hover {
+    box-shadow: 0 2px 8px darkred;
+    width: 75%;
+}
+
+#mixer ul .clear:active {
+    background-color: darkred;
+}
+
+ul .clear button {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    background-color: indianred;
+    color: white;
+    border: none;
+}
+
+ul .clear button:active {
+    background-color: darkred;
 }

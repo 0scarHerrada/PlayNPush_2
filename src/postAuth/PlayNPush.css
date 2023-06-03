@@ -26,7 +26,7 @@
     height: 95%;
     width: 95%;
     display: grid;
-    grid-template-columns: 2fr 9fr 2fr;
+    grid-template-columns: 3fr 9fr 2fr;
     justify-self: center;
     align-items: center;
 }
