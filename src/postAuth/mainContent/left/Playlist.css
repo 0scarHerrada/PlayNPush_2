@@ -19,7 +19,7 @@
 }
 
 #playlist-section input {
-    border-radius:2% / 15%;
+    border-radius:1% / 10%;
     width: 100%;
     font-size: 1.25rem;
     padding: 1%;
@@ -55,14 +55,9 @@
 }
 
 #sort-section div {
-    display: grid;
-    grid-template-columns: 8fr 2fr;
-    gap: 4%;
-}
-
-#sort-section div div{
     display: flex;
     flex-direction: column;
+    gap: 4%;
 }
 
 .hidden-label {

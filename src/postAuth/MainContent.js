@@ -19,7 +19,7 @@ function MainContent(props) {
 
             <Middle token={props.token}  add_to_alpha={setAlphaPlaylist}/>
 
-            <Right token={props.token} beta_playlist={betaPlaylists} final_playlists={finalPlaylists} add_to_finals={setFinalPlaylist}
+            <Right token={props.token} beta_playlist={betaPlaylists} set_beta={setBetaPlaylist} final_playlists={finalPlaylists} add_to_finals={setFinalPlaylist}
                    remove_from_finals={setFinalPlaylist}/>
         </div>
     )

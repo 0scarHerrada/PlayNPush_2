@@ -45,6 +45,19 @@ a:active {
     text-shadow: 0 0 1px #18ab29, 0 0 1px #18ab29;
 }
 
+ul #nb-1 span , ul #nb-2 span {
+    cursor: default;
+    font-size: 3rem;
+}
+
+ul #nb-1 span:hover , ul #nb-2 span:hover {
+    font-size: 3.5rem;
+}
+
+ul #nb-1 span:active , ul #nb-2 span:active {
+    font-size: 2.5rem;
+}
+
 #displayName {
     display: grid;
     grid-template-rows: 3fr 1fr;

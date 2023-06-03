@@ -6,7 +6,7 @@ function Stage(props) {
             props.stage(true)
             props.save(false)
 
-            if (document.getElementById('name-a-playlist').value) {
+            if (document.getElementById('name-a-playlist').value && props.alpha_playlist.length > 0) {
                 const betaName = document.getElementById('name-a-playlist').value;
 
                 const trackDurations = props.alpha_playlist.map(track => track[6])
