@@ -36,6 +36,12 @@ function Player(props) {
         <div id='player'>
             <ul>
                 {alphaPlaylist}
+                <li className='clear' style={(props.alpha_playlist.length <= 5 ? {visibility:'hidden'}
+                    : {display:'block'})} onClick={() => {
+                    props.reset_alpha([]);
+                }}>
+                    <button>CLEAR</button>
+                </li>
             </ul>
         </div>
     )

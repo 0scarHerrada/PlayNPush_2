@@ -41,6 +41,10 @@
             "b b b"
             "c c c";
     }
+    .pool ul li {
+        min-width: 190px;
+        min-height: 295px;
+    }
 }
 
 .pool ul {

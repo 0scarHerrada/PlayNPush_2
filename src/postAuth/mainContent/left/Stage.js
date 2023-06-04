@@ -15,8 +15,10 @@ function Stage(props) {
                     return accumulator + currentValue
                 },0);
 
+                const roundedPlaylistDuration = Math.round(playlistDuration/60000)
+
                 const namedAlpha = props.alpha_playlist.map(track =>
-                    [...track, betaName, playlistDuration, 'false']
+                    [...track, betaName, roundedPlaylistDuration, 'false']
                 )
                 props.set_beta((prev) => [...prev, namedAlpha])
             }

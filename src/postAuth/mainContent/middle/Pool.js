@@ -16,7 +16,7 @@ function Pool(props) {
     //   Song Name 0 Artist Name 1          Album Image 2              Popularity 3      Id 4      Uri 5
         [track.name, track.artists[0].name, track.album.images[0].url, track.popularity, track.id, track.uri,
         //  Duration 6                              Explicit 7      Release Date 8
-            Math.round(track.duration_ms/60000), track.explicit, track.release_date]
+            track.duration_ms, track.explicit, track.album.release_date]
         )
 
 

@@ -3,6 +3,27 @@ import playlist from "../left/Playlist";
 
 function Mixer(props) {
 
+    const [index, setIndex] = useState(0);
+    const [indexSwitch, setIndexSwitch] = useState(false);
+
+    useEffect(() => {
+        if (props.staged_finals.length > 0) {
+            const randomIndex = Math.floor(Math.random()*props.staged_finals[0].length)
+
+            setIndex(randomIndex)
+
+            setIndexSwitch(true)
+        }
+    }, [indexSwitch])
+
+    useEffect(() => {
+        if (indexSwitch === true){
+
+        }
+    })
+
+
+
 
 
     return (
@@ -98,17 +119,15 @@ function Mixer(props) {
             </form>
             <ul id='committed_playlists'>
                 {props.staged_finals.map(playlist =>
-                    <li>
-                        <span className="material-symbols-outlined" style={{cursor: 'default'}}>keyboard_double_arrow_left</span>
-                        <span>{playlist[0][9]}</span>
-                        <div>
-                            <span className="material-symbols-outlined" style={{ color: '#18ab29'}}>music_note</span>
-                            <p>{playlist.length}</p>
-                        </div>
-                        <div>
-                            <span className="material-symbols-outlined" style={{ color: '#18ab29'}}>schedule</span>
-                            <p>{playlist[0][10]}</p>
-                        </div>
+                    <li id='transition'>
+                        <section><span>{playlist[0][9]}</span></section>
+                        <section className='transition-section' style={{animationDelay: '-2s'}}>
+                            <div className='transition-card'>
+                                <div className='music-card-image'>
+                                    <img className='card-image' src={playlist[index][2]} alt=""/>
+                                </div>
+                            </div>
+                        </section>
                     </li>
                 )}
                 <li className='clear' style={(props.staged_finals.length === 0 ? {visibility:'hidden'}
@@ -123,3 +142,14 @@ function Mixer(props) {
 }
 
 export default Mixer;
+
+//<span className="material-symbols-outlined" style={{cursor: 'default'}}>keyboard_double_arrow_left</span>
+//                         <span>{playlist[0][9]}</span>
+//                         <div>
+//                             <span className="material-symbols-outlined" style={{ color: '#18ab29'}}>music_note</span>
+//                             <p>{playlist.length}</p>
+//                         </div>
+//                         <div>
+//                             <span className="material-symbols-outlined" style={{ color: '#18ab29'}}>schedule</span>
+//                             <p>{playlist[0][10]}</p>
+//                         </div>

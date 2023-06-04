@@ -72,6 +72,34 @@ select {
     text-align: center;
 }
 
+#sort-buttons-div {
+    height: 75%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    align-content: space-evenly;
+}
+
+.sort-buttons {
+    height: 95%;
+    width: 95%;
+    justify-self: center;
+    font-size: 1.2rem;
+}
+
+.sort-buttons:hover {
+    opacity: 0.9;
+    background-color: #44c767;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-shadow: 0 0 1px #2f6627, 0 0 1px #2f6627;
+}
+
+.sort-buttons:active {
+    background-color: #18ab29;
+}
+
 
 
 

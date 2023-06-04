@@ -15,7 +15,7 @@
 }
 
 #logout-container:active {
-    color: darkred;
+    color: red;
 }
 
 #logout {
@@ -23,7 +23,7 @@
 }
 
 #logout:active {
-    color: darkred;
+    color: red;
 }
 
 @media only screen and (max-width: 600px)  {

@@ -45,6 +45,9 @@
 
 #player ul li p {
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #player ul li:hover {
@@ -71,3 +74,15 @@
     font-size: 2rem;
 }
 
+#player ul .clear {
+    cursor: pointer;
+    background-color: indianred;
+}
+
+#player ul .clear:hover {
+    box-shadow: 0 2px 15px darkred;
+}
+
+#player ul .clear:active {
+    background-color: red;
+}

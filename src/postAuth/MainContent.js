@@ -14,7 +14,8 @@ function MainContent(props) {
 
     return (
         <div id='main-content'>
-            <Left token={props.token} alpha_playlist={alphaPlaylist} add_to_alpha={setAlphaPlaylist}
+            <Left token={props.token} alpha_playlist={alphaPlaylist} reset_alpha={setAlphaPlaylist}
+                  add_to_alpha={setAlphaPlaylist} sort_alpha={setAlphaPlaylist}
                   remove_from_alpha={setAlphaPlaylist} beta_playlists={betaPlaylists} set_beta={setBetaPlaylist} />
 
             <Middle token={props.token}  add_to_alpha={setAlphaPlaylist}/>

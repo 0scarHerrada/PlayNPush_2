@@ -101,13 +101,13 @@ function PlayNPush(props) {
                     <div id="equalizer"></div>
                     <div className="now-playing-controls">
                         <button id='prev-track' className="btn-spotify" onClick={() => { player.previousTrack() }} >
-                            &lt;&lt;
+                            <span className="material-symbols-outlined" style={{fontSize:'2.5rem'}} >skip_previous</span>
                         </button>
                         <button id='play-button' className="btn-spotify" onClick={() => { player.togglePlay() }} >
-                            <span>{ is_paused ? 'PLAY' : 'PAUSE' }</span>
+                            <span className="material-symbols-outlined" style={{fontSize:'2.5rem'}} >play_pause</span>
                         </button>
                         <button id='next-track' className="btn-spotify" onClick={() => { player.nextTrack() }} >
-                            &gt;&gt;
+                            <span className="material-symbols-outlined" style={{fontSize:'2.5rem'}} >skip_next</span>
                         </button>
                     </div>
                 </section>
