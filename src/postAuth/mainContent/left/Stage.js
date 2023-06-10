@@ -2,7 +2,7 @@ import React from 'react';
 
 function Stage(props) {
     return (
-        <button id='stage-button' placeholder='Stage' onClick={() => {
+        <button id='stage-button' className='bg-color-changer' placeholder='Stage' onClick={() => {
             props.stage(true)
             props.save(false)
 

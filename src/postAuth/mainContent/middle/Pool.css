@@ -50,7 +50,6 @@
 .pool ul {
     border-radius: 3%;
     padding: 2%;
-    background-color: white;
     max-height: 750px;
     height: 100%;
     width: 100%;
@@ -66,15 +65,13 @@
 
 .pool ul li {
     opacity: 0.9;
-    background-color: white;
-    box-shadow: 5px 5px 12px black;
+    box-shadow: 5px 5px 12px #373737;
     border-radius: 5%;
-    border: 1px solid lightgray;
+    border: 1px solid #373737;
     max-width: 200px;
     max-height: 300px;
     height:92%;
     width: 90%;
-    color: black;
     font-size: 1.05rem;
     display: grid;
     grid-template-rows: 5fr 2fr;
@@ -84,7 +81,7 @@
 }
 
 .pool ul li:hover {
-    box-shadow: 2px 2px 10px #18ab29;
+    box-shadow: 0 0 2px black;
 }
 
 .music-card-image {
@@ -111,8 +108,7 @@
 
 .music-card-buttons .playlist-add span {
     position: absolute;
-    background-color: white;
-    color: black;
+    background-color: #121212;
     border-bottom-right-radius: 20%;
     padding-bottom: 3%;
     padding-right: 3%;
@@ -173,7 +169,7 @@
 
 #popularity span {
     font-size: 1.5rem;
-    text-shadow: 0 0 2px lightgray, 0 0 2px lightgray;
+    text-shadow: 0 0 2px #242424, 0 0 2px #242424;
 }
 
 #explicit {
@@ -182,9 +178,8 @@
 }
 
 #explicit span {
-    color: #18ab29;
     font-size: 1.5rem;
-    text-shadow: 0 0 2px lightgray, 0 0 2px lightgray;
+    text-shadow: 0 0 2px #242424, 0 0 2px #242424;
 }
 
 .music-info {

@@ -1,5 +1,4 @@
 #mixer {
-    background-color: white;
     height: 84%;
     width: 98%;
     align-self: center;
@@ -7,6 +6,7 @@
     grid-template-rows: 5fr 1fr 5fr;
     justify-content: center;
     align-items: center;
+    border-radius: 3%;
 }
 
 @media only screen and (max-width: 1760px){
@@ -24,7 +24,6 @@
 
 #mixer ul {
     border-radius: 3%;
-    background-color: white;
     max-height: 600px;
     height: 100%;
     width: 100%;
@@ -38,11 +37,9 @@
 
 #mixer ul li {
     opacity: 0.9;
-    background-color: white;
-    border: 1px darkgray solid;
+    border: 1px #373737 solid;
     border-radius: 1% / 10%;
-    box-shadow: 0 2px 5px black;
-    color: black;
+    box-shadow: 0 2px 5px #373737;
     width: 95%;
     display: grid;
     align-items: center;
@@ -54,20 +51,17 @@
 }
 
 #mixer ul li:hover {
-    box-shadow: 2px 2px 1px #18ab29;
+    box-shadow: 0 0 1px black;
 }
 
 form {
     height: 100%;
     width: 100%;
-    background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 #committed_playlists {
-    height: 95%;
-    width: 100%;
     display: grid;
     grid-auto-rows: 1fr 5fr;
 }
@@ -78,16 +72,16 @@ form {
 }
 
 #initial_playlists li input {
-    accent-color: #18ab29;
+    accent-color: #969696;
 }
 
 #initial_playlists li input:hover {
-    box-shadow: 0 0 9px #44c767;
+    box-shadow: 0 0 3px #969696;
 }
 
 #initial_playlists li input:focus {
-    box-shadow: 0 0 9px #44c767;
-    accent-color: #18ab29;
+    box-shadow: 0 0 3px #969696;
+    accent-color: black;
 }
 
 #initial_playlists li div {
@@ -100,12 +94,11 @@ form {
 
 #initial_playlists li div span {
     font-size: 1.4rem;
-    text-shadow: 0 0 3px lightgray, 0 0 3px lightgray;
+    text-shadow: 0 0 3px #373737, 0 0 3px #373737;
 }
 
 #mb-1, #mb-2, #mb-3{
     font-size: 2.5rem;
-    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,20 +148,28 @@ ul .clear button:active {
 
 #mixer #committed_playlists #transition {
     opacity: 0.9;
-    background-color: white;
-    border: 1px darkgray solid;
-    border-radius: 2% / 20%;
-    box-shadow: 0 2px 5px black;
-    color: black;
-    width: 95%;
+    background-color: black;
+    border: 0 darkgray solid;
+    border-radius: 0;
+    box-shadow: 0 0 0 black;
+    width: 70%;
     display: grid;
     align-items: center;
-    padding: 1%;
-    margin-top: 3%;
-    margin-bottom: 3%;
     font-size: 1.25rem;
+    text-shadow: 0 0 2px #373737, 0 0 2px #373737;
 }
 
+.final-card-image-div {
+    height: 95%;
+    width: 70%;
+}
+
+.final-card-images {
+    max-width: 90%;
+    border: 1px black solid;
+    border-radius: 2%;
+    box-shadow: 0 0 20px #484848;
+}
 
 .transition-section {
     width: 100%;
@@ -177,60 +178,16 @@ ul .clear button:active {
 .transition-card {
     left: 0;
     top: 0;
-    display: block;
+    display: grid;
     width: 100%;
     height: 100%;
     background-size: cover!important;
     background-repeat: no-repeat!important;
     background-position: center top!important;
-    -webkit-animation-name: fade;
+    -webkit-animation-name: slide;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 50s;
-    animation-name: fade;
+    -webkit-animation-duration: 4.5s;
+    animation-name: slide;
     animation-iteration-count: infinite;
-    animation-duration: 10s
-}
-
-@-webkit-keyframes fade {
-    0% {
-        opacity: 1
-    }
-
-    17% {
-        opacity: 1
-    }
-
-    25% {
-        opacity: 0
-    }
-
-    92% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    0% {
-        opacity: 1
-    }
-
-    17% {
-        opacity: 1
-    }
-
-    25% {
-        opacity: 0
-    }
-
-    92% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1
-    }
+    animation-duration: 4.5s
 }

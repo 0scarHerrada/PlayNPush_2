@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 function Push(props) {
-
 
     useEffect(() => {
         async function fetchProfile(token) {
@@ -14,12 +13,8 @@ function Push(props) {
         fetchProfile(props.token);
     }, [props.token])
 
-
-
-    //const profileName = document.getElementById('profile-name').innerHTML;
-
     return (
-        <button id='push-button' placeholder='Push' onClick={() => {
+        <button id='push-button' className='bg-color-changer' placeholder='Push' onClick={() => {
             if (props.staged_finals.length > 0) {
                 props.staged_finals.map(playlist => {
 
@@ -57,13 +52,3 @@ function Push(props) {
 }
 
 export default Push;
-
-
-
-//
-
-
-
-//const requestOptions = {method: 'PUT', headers: {Authorization: `Bearer ${props.token}`},
-//                 body: JSON.stringify({"name": props.staged_finals, })};
-//             fetch(`https://api.spotify.com/v1/users/smedjan/${profileName}`, requestOptions)

@@ -1,11 +1,7 @@
 import './middle/Pool.css';
 import './middle/Search.css';
-import './middle/SortBy.css';
-import React, {useEffect, useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import Pool from './middle/Pool';
-import Search from './middle/Search';
-import SortBy from './middle/SortBy';
-
 
 function Middle(props) {
 
@@ -36,8 +32,10 @@ function Middle(props) {
 
     return (
         <section id='middle'>
-            <Pool pool={trackObject} token={props.token} add_to_alpha={props.add_to_alpha}/>
-            <input onKeyDown={getQuery} id='search-bar' type="search" placeholder='Search by Song or Artist'/>
+            <Pool pool={trackObject} token={props.token} add_to_alpha={props.add_to_alpha} colors={props.colors}/>
+            <input onKeyDown={getQuery} id='search-bar' type="search" placeholder='Search by Song or Artist'
+            style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: props.colors[3],
+                boxShadow: '0 0 9px ' + props.colors[4]}}/>
         </section>
     )
 }

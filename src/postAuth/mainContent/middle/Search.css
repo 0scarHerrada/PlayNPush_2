@@ -10,9 +10,9 @@
 }
 
 #search-bar:focus {
-    border: 1px solid #18ab29;
-    outline: 1px solid #18ab29;
-    box-shadow: 0 0 9px #18ab29;
+    border: var(--text-border-color);
+    outline: var(--text-border-color);
+    box-shadow: var(--text-box-shadow);
     font-size: 1.25rem;
     border-radius: 3% / 30%;
 }

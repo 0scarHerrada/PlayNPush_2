@@ -52,13 +52,12 @@ function Left(props) {
         }
     }, [staged])
 
-    //<Player alpha_playlist={alphaPlaylist} remove_from_alpha={props.remove_from_alpha}/>
-
     return (
         <section id='left'>
-            <Player token={props.token} alpha_playlist={alphaPlaylist} reset_alpha={props.reset_alpha} remove_from_alpha={props.remove_from_alpha}/>
-            <Playlist alpha_playlist={props.alpha_playlist}  sort_alpha={props.sort_alpha} add_to_alpha={props.add_to_alpha} set_beta={props.set_beta}
-                      stage={setStaged} save={setSaving}/>
+            <Player token={props.token} alpha_playlist={alphaPlaylist} reset_alpha={props.reset_alpha}
+                    remove_from_alpha={props.remove_from_alpha} colors={props.colors}/>
+            <Playlist alpha_playlist={props.alpha_playlist}  sort_alpha={props.sort_alpha} add_to_alpha={props.add_to_alpha}
+                      set_beta={props.set_beta} stage={setStaged} save={setSaving} colors={props.colors}/>
             <Save alpha_playlist={props.alpha_playlist} save={setSaving} stage={setStaged}/>
             <Stage alpha_playlist={props.alpha_playlist} set_beta={props.set_beta} stage={setStaged} save={setSaving}/>
         </section>

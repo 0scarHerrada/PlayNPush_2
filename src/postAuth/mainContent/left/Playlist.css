@@ -1,7 +1,5 @@
 #playlist {
     display: none;
-    background-color: white;
-    color: black;
     opacity: 0.9;
     height: 84%;
     width: 100%;
@@ -23,13 +21,13 @@
     width: 100%;
     font-size: 1.25rem;
     padding: 1%;
-    box-shadow: 0 0 9px darkgray;
+    box-shadow: 0 0 9px #484848;
 }
 
 #playlist-section input:focus {
-    border: 1px solid #18ab29;
-    outline: 1px solid #18ab29;
-    box-shadow: 0 0 9px #18ab29;
+    border: var(--text-border-color);
+    outline: var(--text-border-color);
+    box-shadow: var(--text-box-shadow);
     font-size: 1.25rem;
     border-radius: 3% / 30%;
 }
@@ -85,19 +83,19 @@ select {
     width: 95%;
     justify-self: center;
     font-size: 1.2rem;
+    box-shadow: var(--text-box-shadow);
 }
 
 .sort-buttons:hover {
     opacity: 0.9;
-    background-color: #44c767;
-    color: white;
+    background-color: var(--sort-color);
     font-size: 1.3rem;
     font-weight: 800;
-    text-shadow: 0 0 1px #2f6627, 0 0 1px #2f6627;
+    text-shadow: var(--sort-text-shadow);
 }
 
 .sort-buttons:active {
-    background-color: #18ab29;
+    background-color: var(--sort-background-color);
 }
 
 

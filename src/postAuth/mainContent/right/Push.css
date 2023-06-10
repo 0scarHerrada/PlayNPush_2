@@ -3,7 +3,7 @@
     border: 2px solid #18ab29;
     border-radius: 30% 10% 90% 40%;
     box-shadow: 0 0 9px #18ab29;
-    background-color: #44c767;
+    background-color: #1AB26B;
     color: white;
     font-size: 4rem;
     letter-spacing: 10px;
@@ -37,5 +37,7 @@
     #push-button {
         height: 11%;
         align-self: center;
+        border-radius: 8% 8% 35% 35%;
+        padding-right: 0;
     }
 }

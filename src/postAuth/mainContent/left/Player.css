@@ -10,7 +10,6 @@
 
 #player ul {
     border-radius: 3%;
-    background-color: white;
     max-height: 550px;
     height: 100%;
     width: 100%;
@@ -24,11 +23,9 @@
 
 #player ul li {
     opacity: 0.9;
-    background-color: white;
-    border: 1px darkgray solid;
+    border: 1px #373737 solid;
     border-radius: 1% / 10%;
     box-shadow: 0 2px 5px black;
-    color: black;
     width: 95%;
     display: grid;
     grid-template-columns: 1fr 2fr 6fr 1fr;
@@ -51,7 +48,7 @@
 }
 
 #player ul li:hover {
-    box-shadow:2px 2px 1px #18ab29;
+    box-shadow: 0 0 1px black;
 }
 
 

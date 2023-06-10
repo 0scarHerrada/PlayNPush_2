@@ -21,13 +21,14 @@ function Pool(props) {
 
 
     const tracksArray = tracksListArray.map(trackList => (
-        <li>
+        <li style={{backgroundColor: props.colors[1], borderColor: props.colors[3]}}>
             <div className='music-card-image'>
                 <div className='music-card-buttons'>
                     <div className='playlist-add' onClick={() => (
                         props.add_to_alpha((prev) => [...prev, trackList])
                     )}>
-                        <span className="material-symbols-outlined">playlist_add</span>
+                        <span className="material-symbols-outlined" style={{backgroundColor: props.colors[1],
+                            color: props.colors[2]}}>playlist_add</span>
                     </div>
                     <div className='play-arrow-container' onClick={() => {
                         const requestOptions = {method: 'PUT', headers: {Authorization: `Bearer ${props.token}`},
@@ -37,11 +38,13 @@ function Pool(props) {
                         <span className="material-symbols-outlined">play_arrow</span>
                     </div>
                 </div>
-                <img className='card-image' src={tracks ? trackList[2] : "https://i.scdn.co/image/ab67616d00001e027dd26d4f61619a3745898807"} alt=""/>
+                <img className='card-image' src={tracks ? trackList[2] :
+                    "https://i.scdn.co/image/ab67616d00001e027dd26d4f61619a3745898807"} alt=""/>
             </div>
             <div className='music-card-info'>
-                <div id='popularity' style={{ color: '#18ab29' }}>
-                    <span className="material-symbols-outlined" >{trackList[3] < 50 ? 'star' :
+                <div id='popularity'>
+                    <span className="material-symbols-outlined" style={{color: props.colors[2], fontWeight: 'bold',
+                        textShadow: 'none'}}>{trackList[3] < 50 ? 'star' :
                         trackList[3] >= 50 && trackList[3] < 81 ? 'star_half'
                             : 'stars'}</span>
                 </div>
@@ -51,15 +54,14 @@ function Pool(props) {
                         'Artist Name'}</p>
                 </div>
                 <div id='explicit'>
-                    <span className="material-symbols-outlined" style={trackList[7] === false ? {display: 'none'} : {display: 'block'}}>explicit</span>
+                    <span className="material-symbols-outlined" style={trackList[7] === false ? {display: 'none'} :
+                        {display: 'block', color: props.colors[2], fontWeight: 'bold', textShadow: 'none'}}>explicit</span>
                 </div>
             </div>
         </li>
     ))
 
-
-
-        return (
+    return (
         <div id='id-pool' className='pool'>
             <ul>
                 {tracksArray}

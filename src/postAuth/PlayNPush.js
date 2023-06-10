@@ -4,6 +4,11 @@ import Header from './Header'
 import MainContent from './MainContent';
 import React, { useState, useEffect } from 'react';
 
+import githubLogoBlack from '../assets/github-mark-black.png';
+import githubLogoLightGray from '../assets/github-mark-lightgray.png';
+import spotifyLogoBlack from '../assets/spotify-black-logo.png';
+import spotifyLogoWhite from '../assets/spotify-white-logo.png';
+
 const track = {
     name: "",
     album: {
@@ -24,98 +29,103 @@ function PlayNPush(props) {
     const [current_track, setTrack] = useState(track);
 
     useEffect(() => {
+        if (!player) {
+            const script = document.createElement("script");
+            script.src = "https://sdk.scdn.co/spotify-player.js";
+            script.async = true;
 
-        const script = document.createElement("script");
-        script.src = "https://sdk.scdn.co/spotify-player.js";
-        script.async = true;
+            document.body.appendChild(script);
 
-        document.body.appendChild(script);
+            window.onSpotifyWebPlaybackSDKReady = () => {
 
-        window.onSpotifyWebPlaybackSDKReady = () => {
-
-            const player = new window.Spotify.Player({
-                name: 'PlayNPush',
-                getOAuthToken: cb => { cb(props.token); },
-                volume: 0.5
-            });
-
-            setPlayer(player);
-
-            player.addListener('ready', ({ device_id }) => {
-                console.log('Ready with Device ID', device_id);
-            });
-
-            player.addListener('not_ready', ({ device_id }) => {
-                console.log('Device ID has gone offline', device_id);
-            });
-
-            player.addListener('player_state_changed', ( state => {
-
-                if (!state) {
-                    return;
-                }
-
-                setTrack(state.track_window.current_track);
-                setPaused(state.paused);
-
-                player.getCurrentState().then( state => {
-                    (!state)? setActive(false) : setActive(true)
+                const player = new window.Spotify.Player({
+                    name: 'PlayNPush',
+                    getOAuthToken: cb => { cb(props.token); },
+                    volume: 0.5
                 });
 
-            }));
+                setPlayer(player);
 
-            player.connect();
-        };
+                player.addListener('ready', ({ device_id }) => {
+                    console.log('Ready with Device ID', device_id);
+                });
 
-    }, []);
+                player.addListener('not_ready', ({ device_id }) => {
+                    console.log('Device ID has gone offline', device_id);
+                });
 
-    if (!is_active) {
-        return (
-            <>
-                <div id='post-auth'>
-                    <Header token={props.token}/>
-                    <div className="main-container">
-                        <div className="main-wrapper">
-                            <b> To use Web Player transfer your playback from the Spotify app to PlayNPush (Premium subscription required) </b>
-                        </div>
-                    </div>
-                    <MainContent token={props.token} />
-                </div>
-            </>
-        )
-    } else {
-        return (
-            <>
-            <div id='post-auth'>
-                <Header token={props.token}/>
+                player.addListener('player_state_changed', ( state => {
+
+                    if (!state) {
+                        return;
+                    }
+
+                    setTrack(state.track_window.current_track);
+                    setPaused(state.paused);
+
+                    player.getCurrentState().then( state => {
+                        (!state)? setActive(false) : setActive(true)
+                    });
+
+                }));
+
+                player.connect();
+            };
+        }
+    }, );
+
+    // Dark Mode
+    const [darkMode, setDarkMode] = useState(false);
+
+    // Colors             0 bg       1 li & input-bg         3 border-color li-box-shadow     5 text-shadow
+    const dark = ['#000000', '#121212', 'lightgray', '#373737', '#484848', '#242424', '#969696', githubLogoLightGray, spotifyLogoWhite];
+    //                                          2 font-color            4 input-box-shadow               6 music-tags
+
+    // Colors             0 bg       1 li & input-bg         3 border-color li-box-shadow     5 text-shadow
+    const light = ['#FFFFFF', '#FEFEFA', 'black', 'lightgray', 'lightgray', '#121212', '#242424', githubLogoBlack, spotifyLogoBlack];
+    //                                          2 font-color            4 input-box-shadow               6 music-tags
+
+    const [colors, setColors] = useState(light);
+
+    useEffect(() => {
+        if (darkMode === true) {
+            setColors(dark);
+        } else if (darkMode === false) {
+            setColors(light);
+        }
+    }, [darkMode])
+
+    return (
+        <>
+            <div id='post-auth' style={{backgroundColor: colors[0], color: colors[2]}}>
+                <Header token={props.token} dark_mode={darkMode} set_dark_mode={setDarkMode} colors={colors}/>
                 <section className="container">
                     <div id="now-playing-container">
                         <div className="now-playing-image-container">
-                            <img src={current_track.album.images[0].url} className="now-playing__cover" alt="" />
+                            <img src={current_track ? current_track.album.images[0].url : ''} className="now-playing__cover" alt="" />
                         </div>
                         <div className="now-playing-info">
-                            <p className="now-playing__name">{current_track.name}</p>
-                            <p className="now-playing__artist">{current_track.artists[0].name}</p>
+                            <p className="now-playing__name">{current_track ? current_track.name : ''}</p>
+                            <p className="now-playing__artist">{current_track ? current_track.artists[0].name : ''}</p>
                         </div>
                     </div>
                     <div id="equalizer"></div>
                     <div className="now-playing-controls">
-                        <button id='prev-track' className="btn-spotify" onClick={() => { player.previousTrack() }} >
+                        <button id='prev-track' className="btn-spotify bg-color-changer" onClick={() => { player.previousTrack() }} >
                             <span className="material-symbols-outlined" style={{fontSize:'2.5rem'}} >skip_previous</span>
                         </button>
-                        <button id='play-button' className="btn-spotify" onClick={() => { player.togglePlay() }} >
+                        <button id='play-button' className="btn-spotify bg-color-changer" onClick={() => { player.togglePlay() }} >
                             <span className="material-symbols-outlined" style={{fontSize:'2.5rem'}} >play_pause</span>
                         </button>
-                        <button id='next-track' className="btn-spotify" onClick={() => { player.nextTrack() }} >
+                        <button id='next-track' className="btn-spotify bg-color-changer" onClick={() => { player.nextTrack() }} >
                             <span className="material-symbols-outlined" style={{fontSize:'2.5rem'}} >skip_next</span>
                         </button>
                     </div>
                 </section>
-                <MainContent token={props.token} />
+                <MainContent token={props.token} dark_mode={darkMode} colors={colors}/>
             </div>
         </>
-        );
-    }
+    )
 }
 
 export default PlayNPush

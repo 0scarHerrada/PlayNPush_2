@@ -6,10 +6,6 @@ nav {
 
 }
 
-#mobile-nav {
-    display: none;
-}
-
 #non-mobile-nav {
     width: 100%;
     display: grid;
@@ -81,7 +77,7 @@ ul #nb-1 span:active , ul #nb-2 span:active {
     height: auto;
     display: block;
     border-radius: 50%;
-    border:3px solid #18ab29;
+    border:3px solid #1AB26B;
     box-shadow: 0 0 15px darkgray;
     margin-bottom: -4%;
 }
@@ -91,7 +87,7 @@ ul #nb-1 span:active , ul #nb-2 span:active {
     font-size: 1.4rem;
     justify-self: center;
     align-self: center;
-    text-shadow: 0 0 3px lightgray, 0 0 3px lightgray;
+    text-shadow: 0 0 3px #484848, 0 0 3px #484848;
 }
 
 .spotify {
@@ -199,7 +195,6 @@ ul #nb-1 span:active , ul #nb-2 span:active {
     #the-mini-player {
         height: 196px;
         width: 520px;
-        background-color: azure;
         display: grid;
         grid-template-columns: 1fr 2fr 6fr 1fr;
         align-items: center;

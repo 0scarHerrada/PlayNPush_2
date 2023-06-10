@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 function Playlist(props) {
-
-    //const [playlistName, setPlaylistName] = useState('')
 
     const getPlaylistName = (event) => {
         if (props.alpha_playlist.length > 0) {
@@ -34,9 +32,10 @@ function Playlist(props) {
         <div id='playlist'>
             <section id='playlist-section'>
                 <input id='name-a-playlist' onKeyUp={getPlaylistName} type="search" placeholder='Enter name...'
-                       maxLength='25'/>
+                       maxLength='25' style={{backgroundColor: props.colors[1], color: props.colors[2],
+                    borderColor: props.colors[3], boxShadow: '0 0 9px ' + props.colors[4]}}/>
             </section>
-            <label id='sort-label' htmlFor="sort-select">Sort by:</label>
+            <label id='sort-label' htmlFor="sort-select" style={{color: props.colors[2]}}>Sort by:</label>
             <div id='sort-buttons-div'>
                 <button className='sort-buttons' onClick={() => {
                     const originalAZ = props.alpha_playlist.map(track => track[1]+track[5].toLowerCase())
@@ -45,7 +44,7 @@ function Playlist(props) {
                     const aZ = newAZ.map(index => props.alpha_playlist[index])
 
                     props.sort_alpha(aZ);
-                }} >A-Z</button>
+                }} style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[6]}} >Artists A-Z</button>
                 <button className='sort-buttons' onClick={() => {
                     const originalZA = props.alpha_playlist.map(track => track[1]+track[5].toLowerCase())
                     const sortedZA = props.alpha_playlist.map(track => track[1]+track[5].toLowerCase()).sort()
@@ -54,7 +53,7 @@ function Playlist(props) {
                     const zA = aZ.reverse()
 
                     props.sort_alpha(zA);
-                }} >Z-A</button>
+                }} style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[6]}}>Artists Z-A</button>
                 <button className='sort-buttons' onClick={() => {
                     const originalLH = props.alpha_playlist.map(track => track[3]+track[5])
                     const sortedLH = props.alpha_playlist.map(track => track[3]+track[5]).sort()
@@ -63,7 +62,7 @@ function Playlist(props) {
                     const lowHigh = highLow.reverse()
 
                     props.sort_alpha(lowHigh);
-                }} >Higher popularity - Lower popularity</button>
+                }} style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[6]}}>Higher popularity - Lower popularity</button>
                 <button className='sort-buttons' onClick={() => {
                     const originalHL = props.alpha_playlist.map(track => track[3]+track[5])
                     const sortedHL = props.alpha_playlist.map(track => track[3]+track[5]).sort()
@@ -71,7 +70,7 @@ function Playlist(props) {
                     const highLow = newHL.map(index => props.alpha_playlist[index])
 
                     props.sort_alpha(highLow);
-                }} >Lower popularity - Higher popularity</button>
+                }} style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[6]}}>Lower popularity - Higher popularity</button>
                 <button className='sort-buttons' onClick={() => {
                     const originalSL = props.alpha_playlist.map(track => track[6])
                     const sortedSL = props.alpha_playlist.map(track => track[6]).sort((a,b) => a-b);
@@ -79,7 +78,7 @@ function Playlist(props) {
                     const shortLong = newSL.map(index => props.alpha_playlist[index])
 
                     props.sort_alpha(shortLong);
-                }} >Short songs - Long songs</button>
+                }} style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[6]}}>Short songs - Long songs</button>
                 <button className='sort-buttons' onClick={() => {
                     const originalLS = props.alpha_playlist.map(track => track[6])
                     const sortedLS = props.alpha_playlist.map(track => track[6]).sort((a,b) => a-b);
@@ -88,7 +87,7 @@ function Playlist(props) {
                     const longShort = shortLong.reverse()
 
                     props.sort_alpha(longShort);
-                }} >Long songs - Short songs</button>
+                }} style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[6]}}>Long songs - Short songs</button>
                 <button className='sort-buttons' onClick={() => {
                     const originalON = props.alpha_playlist.map(track => track[8]+track[5])
                     const sortedON = props.alpha_playlist.map(track => track[8]+track[5]).sort()
@@ -96,7 +95,7 @@ function Playlist(props) {
                     const oldNew = newON.map(index => props.alpha_playlist[index])
 
                     props.sort_alpha(oldNew);
-                }} >Old songs - New songs</button>
+                }} style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[6]}}>Old songs - New songs</button>
                 <button className='sort-buttons' onClick={() => {
                     const originalNO = props.alpha_playlist.map(track => track[8]+track[5])
                     const sortedNO = props.alpha_playlist.map(track => track[8]+track[5]).sort()
@@ -105,46 +104,10 @@ function Playlist(props) {
                     const newOld = oldNew.reverse()
 
                     props.sort_alpha(newOld);
-                }} >New songs - Old songs</button>
+                }} style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[6]}}>New songs - Old songs</button>
             </div>
         </div>
     )
 }
 
 export default Playlist;
-
-
-// <section id='sort-section'>
-//                 <div>
-//                     <label htmlFor="">Artist</label>
-//                     <select name="sort-options" id="sort-select">
-//                         <option value="">None</option>
-//                         <option value="1">A - Z</option>
-//                         <option value="2">Z - A</option>
-//                     </select>
-//                 </div>
-//                 <div>
-//                     <label htmlFor="">Popularity</label>
-//                     <select name="sort-options" id="sort-select">
-//                         <option value="">None</option>
-//                         <option value="3">Higher popularity - Lower popularity</option>
-//                         <option value="4">Lower popularity - Higher popularity</option>
-//                     </select>
-//                 </div>
-//                 <div>
-//                     <label htmlFor="">Runtime</label>
-//                     <select name="sort-options" id="sort-select">
-//                         <option value="">None</option>
-//                         <option value="5">Short songs - Long songs</option>
-//                         <option value="6">Long songs - Short songs</option>
-//                     </select>
-//                 </div>
-//                 <div>
-//                     <label htmlFor="">Year</label>
-//                     <select name="sort-options" id="sort-select">
-//                         <option value="">None</option>
-//                         <option value="alpha-song">Old songs - New songs</option>
-//                         <option value="alpha-song-r">New songs - Old songs</option>
-//                     </select>
-//                 </div>
-// </section>

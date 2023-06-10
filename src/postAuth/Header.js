@@ -1,17 +1,12 @@
-import './header/Logout.css';
 import './header/Nav.css';
-import './header/MiniPlayer.css';
-import React, {useEffect, useState} from 'react';
-import Logout from './header/Logout';
+import React from 'react';
 import Nav from './header/Nav';
-import MiniPlayer from './header/MiniPlayer';
 
 function Header(props) {
 
     return (
-        <section id='header'>
-            <Logout />
-            <Nav token={props.token}/>
+        <section id='header' style={{backgroundColor: props.colors[0]}}>
+            <Nav token={props.token} dark_mode={props.dark_mode} set_dark_mode={props.set_dark_mode} colors={props.colors}/>
         </section>
     )
 }

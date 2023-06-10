@@ -1,36 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import playlist from "../left/Playlist";
+import React from 'react';
 
 function Mixer(props) {
-
-    const [index, setIndex] = useState(0);
-    const [indexSwitch, setIndexSwitch] = useState(false);
-
-    useEffect(() => {
-        if (props.staged_finals.length > 0) {
-            const randomIndex = Math.floor(Math.random()*props.staged_finals[0].length)
-
-            setIndex(randomIndex)
-
-            setIndexSwitch(true)
-        }
-    }, [indexSwitch])
-
-    useEffect(() => {
-        if (indexSwitch === true){
-
-        }
-    })
-
-
-
-
 
     return (
         <div id='mixer'>
             <ul id='initial_playlists'>
                 {props.beta_playlist.map(playlist =>
-                    <li className='beta-playlist'>
+                    <li className='beta-playlist' style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[2]}}>
                         <input type="checkbox" onClick={() => {
                             if (playlist[0][11] === 'false') {
                                 playlist[0][11] = 'true';
@@ -40,11 +16,11 @@ function Mixer(props) {
                         }}/>
                         <span>{playlist[0][9]}</span>
                         <div>
-                            <span className="material-symbols-outlined" style={{ color: '#18ab29'}}>music_note</span>
+                            <span className="material-symbols-outlined" style={{textShadow: 'none'}}>music_note</span>
                             <p>{playlist.length}</p>
                         </div>
                         <div>
-                            <span className="material-symbols-outlined" style={{ color: '#18ab29', marginRight: '3px'}}>schedule</span>
+                            <span className="material-symbols-outlined" style={{textShadow: 'none', marginRight: '3px'}}>schedule</span>
                             <p>{playlist[0][10]}</p>
                         </div>
                     </li>
@@ -64,7 +40,7 @@ function Mixer(props) {
                             props.set_staged_finals(prev => [...prev, playlist])
                         )
                     }
-                }} >arrow_downward</span>
+                }} style={{color: props.colors[2]}}>arrow_downward</span>
                 <span id='mb-2' className="material-symbols-outlined" onClick={ () => {
                     if (props.beta_playlist.length > 0 && props.staged_finals.length === 0 &&
                         props.beta_playlist.filter(playlist => playlist[0][11] === 'true').length > 1) {
@@ -79,7 +55,7 @@ function Mixer(props) {
 
                         props.set_staged_finals(prev => [...prev, unifiedPlaylist])
                     }
-                }} >join_full</span>
+                }} style={{color: props.colors[2]}}>join_full</span>
                 <span id='mb-3' className="material-symbols-outlined" onClick={ () => {
                     if (props.beta_playlist.length > 0 && props.staged_finals.length === 0 &&
                         props.beta_playlist.filter(playlist => playlist[0][11] === 'true').length > 1) {
@@ -115,19 +91,23 @@ function Mixer(props) {
                             props.set_staged_finals(prev => [...prev, intersectedPlaylist])
                         }
                     }
-                }} >join_inner</span>
+                }} style={{color: props.colors[2]}}>join_inner</span>
             </form>
-            <ul id='committed_playlists'>
+            <ul id='committed_playlists' style={props.staged_finals.length > 0 ?
+            {display: 'grid', gridAutoRows: '100%', height: '95%', width: '95%', border: 'var(--final-border)',
+            boxShadow: 'var(--final-box-shadow)'} : {display: 'grid', gridAutoRows: '100%', height: '95%', width: '95%',
+                border: '2px solid darkgray', boxShadow: '0 0 8px darkgray'}}>
                 {props.staged_finals.map(playlist =>
-                    <li id='transition'>
-                        <section><span>{playlist[0][9]}</span></section>
-                        <section className='transition-section' style={{animationDelay: '-2s'}}>
+                    <li id='transition' style={{backgroundColor: props.colors[0], gridTemplateColumns: '1fr',
+                    justifySelf: 'center', textAlign: 'center', fontSize: '1.5rem', letterSpacing: '1px'}}>
+                        <section className='transition-section'>
                             <div className='transition-card'>
-                                <div className='music-card-image'>
-                                    <img className='card-image' src={playlist[index][2]} alt=""/>
+                                <div className='final-card-image-div' style={{alignSelf: 'center', justifySelf: 'center'}}>
+                                    <img className='final-card-images' src={playlist[props.index][2]} alt=""/>
                                 </div>
                             </div>
                         </section>
+                        <section><span style={{color: props.colors[6]}}>{playlist[0][9]}</span></section>
                     </li>
                 )}
                 <li className='clear' style={(props.staged_finals.length === 0 ? {visibility:'hidden'}
@@ -142,14 +122,3 @@ function Mixer(props) {
 }
 
 export default Mixer;
-
-//<span className="material-symbols-outlined" style={{cursor: 'default'}}>keyboard_double_arrow_left</span>
-//                         <span>{playlist[0][9]}</span>
-//                         <div>
-//                             <span className="material-symbols-outlined" style={{ color: '#18ab29'}}>music_note</span>
-//                             <p>{playlist.length}</p>
-//                         </div>
-//                         <div>
-//                             <span className="material-symbols-outlined" style={{ color: '#18ab29'}}>schedule</span>
-//                             <p>{playlist[0][10]}</p>
-//                         </div>

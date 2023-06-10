@@ -1,25 +1,18 @@
+:root {
+    --text-border-color: 2px solid #24A86A;
+    --text-box-shadow: 0 0 12px #24A86A;
+    --sort-color: #1AB26B;
+    --sort-text-shadow: 0 0 1px #2F6627, 0 0 1px #2F6627;
+    --sort-background-color: #2F9D6A;
+    --final-box-shadow: 0 0 8px #24A86A;
+    --final-border-color: 1px solid #24A86A;
+}
+
 #post-auth {
     height: 100vh;
     display: grid;
     grid-template-rows: 4fr 1fr 15fr;
-}
-
-@media only screen and (min-width: 325px) {
-    #post-auth {
-        background-color: white;
-    }
-}
-
-@media only screen and (min-width: 890px) {
-    #post-auth {
-        background-color: white;
-    }
-}
-
-@media only screen and (min-width: 1765px) {
-    #post-auth {
-        background-color: white;
-    }
+    color: black;
 }
 
 .container {
@@ -92,7 +85,7 @@
 
 .btn-spotify {
     opacity: 0.9;
-    background-color: #44c767;
+    background-color: #1AB26B;
     border:2px solid #18ab29;
     cursor:pointer;
     color:#ffffff;
@@ -117,7 +110,7 @@ img {
 #play-button {
     border: 2px solid #18ab29;
     box-shadow: 0 0 8px darkgray;
-    background-color: #44c767;
+    background-color: #1AB26B;
     opacity: 0.8;
     font-size: 2rem;
 }
@@ -125,7 +118,7 @@ img {
 #prev-track, #next-track {
     border: 2px solid #18ab29;
     box-shadow: 0 0 8px darkgray;
-    background-color: #44c767;
+    background-color: #1AB26B;
     opacity: 0.8;
     font-size: 2rem;
 }

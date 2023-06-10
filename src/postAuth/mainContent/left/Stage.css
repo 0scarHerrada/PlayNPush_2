@@ -10,7 +10,7 @@
     border:2px solid #18ab29;
     border-radius: 10% 30% 40% 90%;
     box-shadow: 0 0 9px darkgray;
-    background-color: #44c767;
+    background-color: #1AB26B;
     color: white;
     padding-left: 5%;
     padding-bottom: 5%;
@@ -21,21 +21,16 @@
     text-shadow: 0 0 2px #18ab29, 0 0 2px #18ab29;
 }
 
-/*
-background-color:#44c767;
-border:2px solid #18ab29;
- */
-
 #stage-button:hover {
     opacity: 0.8;
-    background-color: #18ab29;
+    background-color: #24A86A;
     border:2px solid #44c767;
     box-shadow: 0 0 13px darkgray;
 }
 
 #stage-button:active {
     opacity: 1.0;
-    background-color: #18ab29;
+    background-color: #24A86A;
     border:2px solid #44c767;
     box-shadow: 0 0 0 darkgray;
 }
