@@ -1,4 +1,4 @@
-#search-bar {
+#mobile-search-bar {
     height: 10%;
     width: 95%;
     justify-self: center;
@@ -10,7 +10,7 @@
     border: 1px solid black;
 }
 
-#search-bar:focus {
+#mobile-search-bar:focus {
     border: var(--text-border-color);
     outline: var(--text-border-color);
     box-shadow: var(--text-box-shadow);

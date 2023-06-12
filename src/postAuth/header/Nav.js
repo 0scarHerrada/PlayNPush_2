@@ -54,17 +54,27 @@ function Nav(props) {
             document.getElementsByClassName('bg-color-changer')[5].style.boxShadow = '0 0 9px ' + changerSecondary[changerIndex];
         }
 
-        document.getElementById('profile-border').style.backgroundColor = changerColors[changerIndex];
+        if (document.getElementsByClassName('bg-color-changer')[6]) {
+            document.getElementsByClassName('bg-color-changer')[6].style.backgroundColor = changerColors[changerIndex];
+            document.getElementsByClassName('bg-color-changer')[6].style.borderColor = changerSecondary[changerIndex];
+            document.getElementsByClassName('bg-color-changer')[6].style.boxShadow = '0 0 9px ' + changerSecondary[changerIndex];
+
+            document.getElementsByClassName('bg-color-changer')[7].style.backgroundColor = changerColors[changerIndex];
+            document.getElementsByClassName('bg-color-changer')[7].style.borderColor = changerSecondary[changerIndex];
+            document.getElementsByClassName('bg-color-changer')[7].style.boxShadow = '0 0 9px ' + changerSecondary[changerIndex];
+        }
+
+        document.getElementById('profile-border').style.borderColor = changerColors[changerIndex];
 
         const inputColor = document.querySelectorAll('input');
         inputColor.forEach(track => {
             track.style.setProperty('--text-border-color', '2px solid ' + changerSecondary[changerIndex]);
-            track.style.setProperty('--text-box-shadow', '0 0 9px ' + changerSecondary[changerIndex]);
+            track.style.setProperty('--text-box-shadow', '0 0 12px ' + changerSecondary[changerIndex]);
         });
 
         const buttonColor = document.querySelectorAll('button');
         buttonColor.forEach(track => {
-            track.style.setProperty('--sort-color', changerSecondary[changerIndex]);
+            track.style.setProperty('--sort-color', changerColors[changerIndex]);
             track.style.setProperty('--sort-text-shadow', '0 0 1px ' + changerSecondary[changerIndex] +
             ', 0 0 1px '+ changerSecondary[changerIndex]);
             track.style.setProperty('--sort-background-color', changerThird[changerIndex]);

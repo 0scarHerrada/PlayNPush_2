@@ -1,0 +1,9 @@
+#mobile-playlist {
+    display: none;
+    opacity: 0.9;
+    height: 84%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 720px;
+}

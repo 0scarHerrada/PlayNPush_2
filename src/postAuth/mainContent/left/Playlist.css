@@ -21,7 +21,8 @@
     width: 100%;
     font-size: 1.25rem;
     padding: 1%;
-    box-shadow: 0 0 9px #484848;
+    box-shadow: 0 0 6px #969696;
+    border: 1px solid black;
 }
 
 #playlist-section input:focus {
@@ -84,20 +85,20 @@ select {
     justify-self: center;
     font-size: 1.2rem;
     box-shadow: var(--text-box-shadow);
+    background-color: transparent;
 }
 
 .sort-buttons:hover {
     opacity: 0.9;
     background-color: var(--sort-color);
     font-size: 1.3rem;
-    font-weight: 800;
+    font-weight: 600;
     text-shadow: var(--sort-text-shadow);
 }
 
 .sort-buttons:active {
     background-color: var(--sort-background-color);
 }
-
 
 
 

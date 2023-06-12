@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Player(props) {
+function MobilePlayer(props) {
 
     const [alphaPlaylist, setAlphaPlaylist] = useState([])
 
@@ -9,7 +9,7 @@ function Player(props) {
     }, [props.alpha_playlist])
 
     return (
-        <div id='player'>
+        <div id='mobile-player'>
             <ul>
                 {alphaPlaylist.map(track =>
                     <li style={{backgroundColor: props.colors[1], borderColor: props.colors[3], color: props.colors[2]}}>
@@ -24,7 +24,7 @@ function Player(props) {
                             })
                         }
                     }}>playlist_remove</span>
-                        <div className='player-image'>
+                        <div id='mobile-player-image' >
                             <img src={track[2]} alt=""/>
                         </div>
                         <p>{track[1]} | {track[0]}</p>
@@ -46,4 +46,4 @@ function Player(props) {
     )
 }
 
-export default Player;
+export default MobilePlayer;

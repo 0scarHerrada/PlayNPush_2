@@ -1,0 +1,87 @@
+.mobile-pool {
+    border-radius: 5%;
+    height: 89%;
+    width: 99%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+}
+
+@media only screen and (max-width: 670px)  {
+    #mobile-id-pool ul {
+        max-height: 650px;
+        grid-template:
+            "a a"
+            "b b"
+            "c c";
+    }
+}
+
+@media only screen and (min-width: 670px) and (max-width: 890px)  {
+    #mobile-id-pool ul {
+        max-height: 650px;
+        grid-template:
+            "a a a"
+            "b b b"
+            "c c c";
+    }
+}
+
+@media only screen and (min-width: 890px) and (max-width: 1100px)  {
+    #mobile-id-pool ul {
+        grid-template:
+            "a a"
+            "b b"
+            "c c";
+    }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1440px)  {
+    #mobile-id-pool ul {
+        grid-template:
+            "a a a"
+            "b b b"
+            "c c c";
+    }
+    .mobile-pool ul li {
+        min-width: 190px;
+        min-height: 295px;
+    }
+}
+
+.mobile-pool ul {
+    border-radius: 3%;
+    padding: 2%;
+    max-height: 750px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template:
+            "a a a a"
+            "b b b b"
+            "c c c c";
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: auto;
+}
+
+.mobile-pool ul li {
+    opacity: 0.9;
+    box-shadow: 5px 5px 12px #373737;
+    border-radius: 5%;
+    border: 1px solid #373737;
+    max-width: 200px;
+    max-height: 300px;
+    height:92%;
+    width: 90%;
+    font-size: 1.05rem;
+    display: grid;
+    grid-template-rows: 5fr 2fr;
+    align-items: center;
+    padding: 1%;
+    justify-self: center;
+}
+
+.mobile-pool ul li:hover {
+    box-shadow: 0 0 2px black;
+}

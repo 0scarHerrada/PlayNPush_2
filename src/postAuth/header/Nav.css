@@ -28,6 +28,8 @@ a {
     text-decoration: none;
     font-size: 1.5rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 a:hover {
@@ -43,15 +45,15 @@ a:active {
 
 ul #nb-1 span , ul #nb-2 span {
     cursor: default;
-    font-size: 3rem;
+    font-size: 3.25rem;
 }
 
 ul #nb-1 span:hover , ul #nb-2 span:hover {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
 }
 
 ul #nb-1 span:active , ul #nb-2 span:active {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
 }
 
 #displayName {
@@ -114,20 +116,20 @@ ul #nb-1 span:active , ul #nb-2 span:active {
 }
 
 .github {
-    height: 55%;
-    width: 55%;
+    height: 50%;
+    width: 50%;
     overflow: hidden;
     justify-self: center;
 }
 
 .github:hover {
-    height: 60%;
-    width: 60%;
+    height: 55%;
+    width: 55%;
 }
 
 .github:active {
-    height: 50%;
-    width: 50%;
+    height: 45%;
+    width: 45%;
 }
 
 .github img {
@@ -137,20 +139,33 @@ ul #nb-1 span:active , ul #nb-2 span:active {
 }
 
 @media only screen and (max-width: 600px)  {
-    #mini-spotify {
-        height: 90%;
-        width: 90%;
+    #reg-spotify {
+        height: 95%;
+        width: 95%;
     }
-    #profilename {
-        font-size: 1.2rem;
+    .spotify img {
+        max-width: 100%;
+    }
+    #reg-github {
+        height: 95%;
+        width: 95%;
+    }
+    .github img {
+        max-width: 40%;
+    }
+    #profile-name {
+        font-size: 1rem;
         word-spacing: 5px;
+    }
+    ul #nb-1 span , ul #nb-2 span {
+        font-size: 2.2rem;
     }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 890px) {
-    #mini-spotify {
-        height: 80%;
-        width: 80%;
+    #reg-spotify {
+        height: 50%;
+        width: 50%;
     }
 }
 
@@ -169,18 +184,9 @@ ul #nb-1 span:active , ul #nb-2 span:active {
 }
 
 @media only screen and (max-width: 890px)  {
-    #mobile-nav {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
-        align-items: center;
-    }
     #mini-player-button {
         -ms-transform: scale(-1, 1);
         transform: scale(-1, 1);
-    }
-    #non-mobile-nav {
-        display: none;
     }
 }
 

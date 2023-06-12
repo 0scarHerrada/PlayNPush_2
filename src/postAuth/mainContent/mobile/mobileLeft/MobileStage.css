@@ -1,43 +1,45 @@
-#push-button {
-    opacity: 0.9;
-    border: 2px solid #18ab29;
-    border-radius: 30% 10% 90% 40%;
-    box-shadow: 0 0 9px #18ab29;
-    background-color: #1AB26B;
-    color: white;
+#mobile-stage-button {
+    margin-top: 5%;
+    display: none;
     font-size: 4rem;
     letter-spacing: 10px;
     height: 14%;
     width: 100%;
     align-self: center;
-    padding-right: 5%;
+    opacity: 0.9;
+    border:2px solid #18ab29;
+    border-radius: 10% 30% 40% 90%;
+    box-shadow: 0 0 9px darkgray;
+    background-color: #1AB26B;
+    color: white;
+    padding-left: 5%;
     padding-bottom: 5%;
     cursor: pointer;
 }
 
-#push-text {
+#stage-text {
     text-shadow: 0 0 2px #18ab29, 0 0 2px #18ab29;
 }
 
-#push-button:hover {
+#mobile-stage-button:hover {
     opacity: 0.8;
-    background-color: #18ab29;
+    background-color: #24A86A;
     border:2px solid #44c767;
     box-shadow: 0 0 13px darkgray;
 }
 
-#push-button:active {
+#mobile-stage-button:active {
     opacity: 1.0;
-    background-color: #18ab29;
+    background-color: #24A86A;
     border:2px solid #44c767;
     box-shadow: 0 0 0 darkgray;
 }
 
 @media only screen and (max-width: 1760px){
-    #push-button {
+    #mobile-stage-button {
         height: 11%;
-        align-self: center;
+        text-align: center;
         border-radius: 8% 8% 35% 35%;
-        padding-right: 0;
+        padding-right: 5%;
     }
 }

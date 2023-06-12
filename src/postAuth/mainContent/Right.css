@@ -5,7 +5,51 @@
     display: flex;
     justify-self: center;
     flex-direction: column;
+}
+
+#mobile-right {
+    max-height: 850px;
+    min-height: 640px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+#mobile-left-div {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+#mobile-left {
+    max-height: 850px;
+    min-height: 665px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+#mobile-middle-div {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+#mobile-middle {
+    max-height: 950px;
+    min-height: 665px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     gap: 1%;
+    justify-self: center;
+    padding-bottom: 10%;
 }
 
 .tabs {
@@ -14,34 +58,39 @@
 
 @media only screen and (max-width: 890px){
     #right {
-        min-height: 700px;
-        height: 90%;
+        height: 95%;
+    }
+    #mixer {
+        min-height: 580px;
     }
     #tab-menu {
-        height: 6%;
+        height: 5%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: flex-end;
     }
     .tablinks {
-        height: 95%;
+        height: 100%;
     }
 }
 
 @media only screen and (min-width: 890px) and (max-width: 1760px){
     #right {
-        height: 90%;
+        height: 95%;
+    }
+    #mixer {
+        min-height: 580px;
     }
     #tab-menu {
-        height: 6%;
+        height: 5%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: flex-end;
     }
     .tablinks {
-        height: 95%;
+        height: 100%;
     }
-    #pool-tab {
+    #middle-tab {
         display: none;
     }
 }

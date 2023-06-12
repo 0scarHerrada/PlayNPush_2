@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Playlist(props) {
+function MobilePlaylist(props) {
 
     const getPlaylistName = (event) => {
         if (props.alpha_playlist.length > 0) {
@@ -29,7 +29,7 @@ function Playlist(props) {
     }
 
     return (
-        <div id='playlist'>
+        <div id='mobile-playlist'>
             <section id='playlist-section'>
                 <input id='name-a-playlist' onKeyUp={getPlaylistName} type="search" placeholder='Enter name...'
                        maxLength='25' style={{backgroundColor: props.colors[1], color: props.colors[2],
@@ -110,4 +110,4 @@ function Playlist(props) {
     )
 }
 
-export default Playlist;
+export default MobilePlaylist;

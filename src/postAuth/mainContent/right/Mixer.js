@@ -25,7 +25,7 @@ function Mixer(props) {
                         </div>
                     </li>
                 )}
-                <li className='clear' style={(props.beta_playlist.length <= 2 ? {visibility:'hidden'}
+                <li className='clear' style={(props.beta_playlist.length <= 3 ? {visibility:'hidden'}
                     : {display:'block'})} onClick={() => {
                         props.set_beta([]);
                 }}>
@@ -53,7 +53,14 @@ function Mixer(props) {
                             })
                         })
 
-                        props.set_staged_finals(prev => [...prev, unifiedPlaylist])
+                        const droppedPlaylistName = unifiedPlaylist.map((prev) => {
+                                const left = prev.slice(0, 8)
+                                const newPlaylistTitle = ['1', "'X' Playlist", 999, 'true']
+                                return [...left, ...newPlaylistTitle];
+                            }
+                        )
+
+                        props.set_staged_finals(prev => [...prev, droppedPlaylistName])
                     }
                 }} style={{color: props.colors[2]}}>join_full</span>
                 <span id='mb-3' className="material-symbols-outlined" onClick={ () => {
@@ -70,7 +77,7 @@ function Mixer(props) {
 
                         const droppedPlaylistName = unifiedPlaylist.map((prev) => {
                                 const left = prev.slice(0, 8)
-                                const newPlaylistTitle = ['1', 'Intersected Playlist', 999, 'true']
+                                const newPlaylistTitle = ['1', "'Y' Playlist", 999, 'true']
                                 return [...left, ...newPlaylistTitle];
                             }
                         )
@@ -111,7 +118,7 @@ function Mixer(props) {
                     </li>
                 )}
                 <li className='clear' style={(props.staged_finals.length === 0 ? {visibility:'hidden'}
-                    : {display:'block'})} onClick={() => {
+                    : {display:'block', height: '65px'})} onClick={() => {
                         props.set_staged_finals([]);
                 }}>
                     <button>REMOVE</button>

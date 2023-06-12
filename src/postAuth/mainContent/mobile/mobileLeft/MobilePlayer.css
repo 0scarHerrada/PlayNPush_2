@@ -1,4 +1,4 @@
-#player {
+#mobile-player {
     height: 85%;
     width: 100%;
     display: flex;
@@ -8,7 +8,7 @@
     max-height: 720px;
 }
 
-#player ul {
+#mobile-player ul {
     border-radius: 3%;
     max-height: 550px;
     height: 100%;
@@ -21,7 +21,7 @@
     justify-content: center;
 }
 
-#player ul li {
+#mobile-player ul li {
     opacity: 0.9;
     border: 1px #373737 solid;
     border-radius: 1% / 10%;
@@ -36,29 +36,36 @@
     justify-self: center;
 }
 
-#player ul li span {
+#mobile-player ul li span {
     text-shadow: 0 0 2px lightgray, 0 0 2px lightgray;
 }
 
-#player ul li p {
+#mobile-player ul li p {
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-#player ul li:hover {
+#mobile-player ul li:hover {
     box-shadow: 0 0 1px black;
 }
 
 
-#player ul li img {
+#mobile-player ul li img {
     height: auto;
     max-width: 70%;
     display: block;
     border-radius: 10%;
     border: 1px solid black;
     box-shadow: 0 0 5px darkgray;
+}
+
+@media only screen and (max-width: 1760px){
+    #mobile-player-image {
+        max-width: 50%;
+        min-width: 65px;
+    }
 }
 
 #player-button {
@@ -71,15 +78,15 @@
     font-size: 2rem;
 }
 
-#player ul .clear {
+#mobile-player ul .clear {
     cursor: pointer;
     background-color: indianred;
 }
 
-#player ul .clear:hover {
+#mobile-player ul .clear:hover {
     box-shadow: 0 2px 15px darkred;
 }
 
-#player ul .clear:active {
+#mobile-player ul .clear:active {
     background-color: red;
 }

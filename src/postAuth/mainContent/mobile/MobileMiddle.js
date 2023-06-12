@@ -1,9 +1,9 @@
-import './middle/Pool.css';
-import './middle/Search.css';
+import './mobileMiddle/MobilePool.css';
+import './mobileMiddle/MobileSearch.css';
 import React, { useState, useEffect } from 'react';
-import Pool from './middle/Pool';
+import MobilePool from './mobileMiddle/MobilePool';
 
-function Middle(props) {
+function MobileMiddle(props) {
 
     const [trackQuery, setTrackQuery] = useState('');
     const [trackObject, setTrackObject] = useState();
@@ -31,12 +31,12 @@ function Middle(props) {
     }, [trackQuery])
 
     return (
-        <section id='middle'>
-            <Pool pool={trackObject} token={props.token} add_to_alpha={props.add_to_alpha} colors={props.colors}/>
-            <input onKeyDown={getQuery} id='search-bar' type="search" placeholder='Search by Song or Artist'
-            style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: props.colors[3]}}/>
+        <section id='mobile-middle' >
+            <MobilePool pool={trackObject} token={props.token} add_to_alpha={props.add_to_alpha} colors={props.colors}/>
+            <input onKeyDown={getQuery} id='mobile-search-bar' type="search" placeholder='Search by Song or Artist'
+                   style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: props.colors[3]}}/>
         </section>
     )
 }
 
-export default Middle;
+export default MobileMiddle;
