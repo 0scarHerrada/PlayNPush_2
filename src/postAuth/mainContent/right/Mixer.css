@@ -1,5 +1,4 @@
 #mixer {
-    min-height: 600px;
     height: 86%;
     width: 98%;
     align-self: center;
@@ -18,7 +17,6 @@
 
 #mixer ul {
     border-radius: 3%;
-    max-height: 600px;
     height: 100%;
     width: 100%;
     display: grid;
@@ -163,6 +161,12 @@ ul .clear button:active {
     border: 1px black solid;
     border-radius: 2%;
     box-shadow: 0 0 20px #484848;
+}
+
+@media only screen and (max-width: 890px){
+    .final-card-images {
+        max-width: 80%;
+    }
 }
 
 .transition-section {

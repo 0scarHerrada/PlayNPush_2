@@ -35,19 +35,19 @@ function Right(props) {
                     document.getElementById('mobile-right').style.display = 'none';
                     document.getElementById('mobile-middle-div').style.display = 'none';
                 }} style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: '2px solid ' + props.colors[3],
-                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Left</button>
+                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Create</button>
                 <button id='right-tab' className="tablinks" onClick={() => {
                     document.getElementById('mobile-right').style.display = 'block';
                     document.getElementById('mobile-left-div').style.display = 'none';
                     document.getElementById('mobile-middle-div').style.display = 'none';
                 }} style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: '2px solid ' + props.colors[3],
-                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Right</button>
+                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Push</button>
                 <button id='middle-tab' className="tablinks" onClick={() => {
                     document.getElementById('mobile-middle-div').style.display = 'block';
                     document.getElementById('mobile-right').style.display = 'none';
                     document.getElementById('mobile-left-div').style.display = 'none';
                 }} style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: '2px solid ' + props.colors[3],
-                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Middle</button>
+                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Search</button>
             </div>
             <div id='mobile-right'>
                 <Mixer beta_playlist={props.beta_playlist} set_beta={props.set_beta} staged_finals={stagedFinals}

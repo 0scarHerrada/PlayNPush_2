@@ -1,11 +1,10 @@
 #left {
-    max-height: 850px;
     height: 85%;
     width: 85%;
     display: flex;
     justify-self: center;
     flex-direction: column;
-    gap: 1%;
+    justify-content: space-between;
 }
 
 @media only screen and (max-width: 1760px){

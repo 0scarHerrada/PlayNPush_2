@@ -10,7 +10,6 @@
 
 #player ul {
     border-radius: 3%;
-    max-height: 550px;
     height: 100%;
     width: 100%;
     display: grid;

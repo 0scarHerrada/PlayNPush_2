@@ -31,7 +31,7 @@ function MobilePlaylist(props) {
     return (
         <div id='mobile-playlist'>
             <section id='playlist-section'>
-                <input id='name-a-playlist' onKeyUp={getPlaylistName} type="search" placeholder='Enter name...'
+                <input id='mobile-name-a-playlist' onKeyUp={getPlaylistName} type="search" placeholder='Enter name...'
                        maxLength='25' style={{backgroundColor: props.colors[1], color: props.colors[2],
                     borderColor: props.colors[3]}}/>
             </section>

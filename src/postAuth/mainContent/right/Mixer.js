@@ -101,9 +101,9 @@ function Mixer(props) {
                 }} style={{color: props.colors[2]}}>join_inner</span>
             </form>
             <ul id='committed_playlists' style={props.staged_finals.length > 0 ?
-            {display: 'grid', gridAutoRows: '100%', height: '95%', width: '95%', border: 'var(--final-border)',
+            {display: 'grid', gridAutoRows: '100%', height: '95%', width: '95%', maxWidth: '550px', border: 'var(--final-border)',
             boxShadow: 'var(--final-box-shadow)'} : {display: 'grid', gridAutoRows: '100%', height: '95%', width: '95%',
-                border: '2px solid darkgray', boxShadow: '0 0 8px darkgray'}}>
+                    maxWidth: '550px', border: '2px solid darkgray', boxShadow: '0 0 8px darkgray'}}>
                 {props.staged_finals.map(playlist =>
                     <li id='transition' style={{backgroundColor: props.colors[0], gridTemplateColumns: '1fr',
                     justifySelf: 'center', textAlign: 'center', fontSize: '1.5rem', letterSpacing: '1px'}}>

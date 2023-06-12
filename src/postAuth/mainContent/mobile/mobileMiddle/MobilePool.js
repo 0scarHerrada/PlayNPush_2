@@ -42,7 +42,7 @@ function Pool(props) {
                     "https://i.scdn.co/image/ab67616d00001e027dd26d4f61619a3745898807"} alt=""/>
             </div>
             <div className='music-card-info'>
-                <div id='popularity'>
+                <div id='popularity' className='mobile-popularity'>
                     <span className="material-symbols-outlined" style={{color: props.colors[2], fontWeight: 'bold',
                         textShadow: 'none'}}>{trackList[3] < 50 ? 'star' :
                         trackList[3] >= 50 && trackList[3] < 81 ? 'star_half'
@@ -53,7 +53,7 @@ function Pool(props) {
                     <p className='music-info' >{tracks ? trackList[1] :
                         'Artist Name'}</p>
                 </div>
-                <div id='explicit'>
+                <div id='explicit' className='mobile-explicit'>
                     <span className="material-symbols-outlined" style={trackList[7] === false ? {display: 'none'} :
                         {display: 'block', color: props.colors[2], fontWeight: 'bold', textShadow: 'none'}}>explicit</span>
                 </div>
