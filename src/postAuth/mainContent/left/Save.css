@@ -1,5 +1,5 @@
 #save-button {
-    font-size: 4rem;
+    font-size: 3.75rem;
     letter-spacing: 10px;
     height: 14%;
     width: 100%;
@@ -11,7 +11,6 @@
     background-color: #1AB26B;
     color: white;
     padding-left: 5%;
-    padding-bottom: 5%;
     cursor: pointer;
 }
 
@@ -31,4 +30,6 @@
     background-color: #24A86A;
     border:2px solid #44c767;
     box-shadow: 0 0 0 darkgray;
+    position: relative;
+    top: 3px;
 }

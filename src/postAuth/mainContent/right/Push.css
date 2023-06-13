@@ -5,13 +5,12 @@
     box-shadow: 0 0 9px #18ab29;
     background-color: #1AB26B;
     color: white;
-    font-size: 4rem;
+    font-size: 3.75rem;
     letter-spacing: 10px;
     height: 14%;
-    width: 100%;
+    width: 95%;
     align-self: center;
     padding-right: 5%;
-    padding-bottom: 5%;
     cursor: pointer;
 }
 
@@ -21,23 +20,36 @@
 
 #push-button:hover {
     opacity: 0.8;
-    background-color: #18ab29;
+    background-color: #24A86A;
     border:2px solid #44c767;
     box-shadow: 0 0 13px darkgray;
 }
 
 #push-button:active {
     opacity: 1.0;
-    background-color: #18ab29;
+    background-color: #24A86A;
     border:2px solid #44c767;
     box-shadow: 0 0 0 darkgray;
+    position: relative;
+    top: 3px;
 }
 
-@media only screen and (max-width: 1760px){
+@media only screen and (max-width: 825px){
     #push-button {
+        font-size: 3.5rem;
         height: 11%;
         align-self: center;
-        border-radius: 8% 8% 35% 35%;
+        border-radius: 4% / 40%;
+        padding-right: 1%;
+    }
+}
+
+@media only screen and (min-width: 826px)and (max-width: 1760px){
+    #push-button {
+        font-size: 3.5rem;
+        height: 11%;
+        align-self: center;
+        border-radius: 4% / 40%;
         padding-right: 0;
     }
 }

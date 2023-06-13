@@ -99,12 +99,12 @@ form {
 }
 
 #mb-1:hover, #mb-2:hover, #mb-3:hover {
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 
 #mb-1:active, #mb-2:active, #mb-3:active {
-    font-size: 1.5rem;
-    text-shadow: 0 0 1px #18ab29, 0 0 1px #18ab29;
+    font-size: 2rem;
+    text-shadow: 0 0 1px #969696, 0 0 1px #969696;
 }
 
 .hidden-final-playlist {
@@ -166,6 +166,16 @@ ul .clear button:active {
 @media only screen and (max-width: 890px){
     .final-card-images {
         max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1760px) {
+    #mb-1:hover, #mb-2:hover, #mb-3:hover {
+        font-size: 2.6rem;
+    }
+    #mb-1:active, #mb-2:active, #mb-3:active {
+        font-size: 2rem;
+        text-shadow: 0 0 1px #969696, 0 0 1px #969696;
     }
 }
 

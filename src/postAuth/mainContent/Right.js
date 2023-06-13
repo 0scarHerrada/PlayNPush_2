@@ -31,35 +31,32 @@ function Right(props) {
         <section id='right'>
             <div id='tab-menu' className="tabs">
                 <button id='left-tab' className="tablinks" onClick={() => {
-                    document.getElementById('mobile-left-div').style.display = 'block';
-                    document.getElementById('mobile-right').style.display = 'none';
-                    document.getElementById('mobile-middle-div').style.display = 'none';
-                }} style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: '2px solid ' + props.colors[3],
-                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Create</button>
+                    document.getElementsByClassName('mobile-left-div')[0].style.display = 'flex';
+                    document.getElementsByClassName('mobile-right')[0].style.display = 'none';
+                    document.getElementsByClassName('mobile-middle-div')[0].style.display = 'none';
+                }} >Create</button>
                 <button id='right-tab' className="tablinks" onClick={() => {
-                    document.getElementById('mobile-right').style.display = 'block';
-                    document.getElementById('mobile-left-div').style.display = 'none';
-                    document.getElementById('mobile-middle-div').style.display = 'none';
-                }} style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: '2px solid ' + props.colors[3],
-                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Push</button>
+                    document.getElementsByClassName('mobile-right')[0].style.display = 'flex';
+                    document.getElementsByClassName('mobile-left-div')[0].style.display = 'none';
+                    document.getElementsByClassName('mobile-middle-div')[0].style.display = 'none';
+                }} >Push</button>
                 <button id='middle-tab' className="tablinks" onClick={() => {
-                    document.getElementById('mobile-middle-div').style.display = 'block';
-                    document.getElementById('mobile-right').style.display = 'none';
-                    document.getElementById('mobile-left-div').style.display = 'none';
-                }} style={{backgroundColor: props.colors[1], color: props.colors[2], borderColor: '2px solid ' + props.colors[3],
-                    borderRadius: '3% / 20%', borderBottom: '4px solid ' + props.colors[3]}}>Search</button>
+                    document.getElementsByClassName('mobile-middle-div')[0].style.display = 'flex';
+                    document.getElementsByClassName('mobile-right')[0].style.display = 'none';
+                    document.getElementsByClassName('mobile-left-div')[0].style.display = 'none';
+                }} >Search</button>
             </div>
-            <div id='mobile-right'>
+            <div id='mobile-right-id' className='mobile-right'>
                 <Mixer beta_playlist={props.beta_playlist} set_beta={props.set_beta} staged_finals={stagedFinals}
                        set_staged_finals={setStagedFinals} index={index} colors={props.colors}/>
                 <Push token={props.token} staged_finals={stagedFinals} user_id={userId} set_user_id={setUserId}/>
             </div>
-            <div id='mobile-left-div'>
+            <div className='mobile-left-div'>
                 <MobileLeft token={props.token} alpha_playlist={props.alpha_playlist} reset_alpha={props.reset_alpha}
                             add_to_alpha={props.add_to_alpha} sort_alpha={props.sort_alpha} remove_from_alpha={props.remove_from_alpha}
                             beta_playlists={props.beta_playlist} set_beta={props.set_beta} colors={props.colors}/>
             </div>
-            <div id='mobile-middle-div'>
+            <div className='mobile-middle-div'>
                 <MobileMiddle token={props.token} add_to_alpha={props.add_to_alpha} colors={props.colors} />
             </div>
         </section>

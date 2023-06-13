@@ -138,10 +138,13 @@ ul #nb-1 span:active , ul #nb-2 span:active {
     display: block;
 }
 
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 426px) {
+    ul #nb-1 span , ul #nb-2 span {
+        font-size: 2.1rem;
+    }
     #reg-spotify {
-        height: 95%;
-        width: 95%;
+        height: 100%;
+        width: 100%;
     }
     .spotify img {
         max-width: 100%;
@@ -151,28 +154,69 @@ ul #nb-1 span:active , ul #nb-2 span:active {
         width: 95%;
     }
     .github img {
-        max-width: 40%;
+        max-width: 45%;
+    }
+    #profile-name {
+        font-size: 1rem;
+        word-spacing: 5px;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 600px)  {
+    #reg-spotify {
+        height: 90%;
+        width: 90%;
+    }
+    .spotify img {
+        max-width: 100%;
+    }
+    #reg-github {
+        height: 95%;
+        width: 95%;
+    }
+    .github img {
+        max-width: 35%;
     }
     #profile-name {
         font-size: 1rem;
         word-spacing: 5px;
     }
     ul #nb-1 span , ul #nb-2 span {
-        font-size: 2.2rem;
+        font-size: 2.75rem;
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 890px) {
+@media only screen and (min-width: 600px) and (max-width: 820px) {
     #reg-spotify {
-        height: 50%;
-        width: 50%;
+        height: 90%;
+        width: 90%;
+    }
+    #reg-github {
+        height: 95%;
+        width: 95%;
+    }
+    .github img {
+        max-width: 30%;
+    }
+    ul #nb-1 span , ul #nb-2 span {
+        font-size: 2.75rem;
     }
 }
 
-@media only screen and (min-width: 890px) and (max-width: 1310px) {
+@media only screen and (min-width: 820px) and (max-width: 1310px) {
     #reg-spotify {
-        height: 70%;
-        width: 70%;
+        height: 90%;
+        width: 90%;
+    }
+    #reg-github {
+        height: 95%;
+        width: 95%;
+    }
+    .github img {
+        max-width: 30%;
+    }
+    ul #nb-1 span , ul #nb-2 span {
+        font-size: 2.75rem;
     }
 }
 
@@ -194,7 +238,8 @@ ul #nb-1 span:active , ul #nb-2 span:active {
     display: none;
 }
 
-@media only screen and (max-width: 560px) and (max-height: 256px) {
+/*
+@media only screen and (max-width: 550px) and (max-height: 550px) {
     #mobile-nav {
         display: none;
     }
@@ -209,3 +254,4 @@ ul #nb-1 span:active , ul #nb-2 span:active {
         align-self: center;
     }
 }
+*/

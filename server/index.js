@@ -61,7 +61,8 @@ app.get('/auth/callback', (req, res) => {
 
   request.post('https://accounts.spotify.com/api/token', authOptions, function(error, response, body) {
     if (!error && response.statusCode === 200) {
-      access_token = body.access_token;
+      // change back to access_token if issues are encountered
+      global.access_token = body.access_token;
       res.redirect('/')
     }
   });
@@ -69,7 +70,7 @@ app.get('/auth/callback', (req, res) => {
 })
 
 app.get('/auth/token', (req, res) => {
-  res.json({ access_token: access_token})
+  res.json({access_token: access_token})
 })
 
 app.listen(port, () => {

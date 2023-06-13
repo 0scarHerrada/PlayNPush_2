@@ -1,4 +1,5 @@
 .mobile-pool {
+    max-height: 530px;
     border-radius: 5%;
     height: 89%;
     width: 99%;
@@ -50,10 +51,6 @@
             "b b b"
             "c c c";
     }
-    .mobile-pool ul li {
-        min-width: 190px;
-        min-height: 295px;
-    }
 }
 
 .mobile-pool ul {
@@ -77,11 +74,11 @@
     box-shadow: 5px 5px 12px #373737;
     border-radius: 5%;
     border: 1px solid #373737;
-    max-width: 200px;
-    max-height: 300px;
+    max-width: 160px;
+    max-height: 220px;
     height:92%;
     width: 90%;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     display: grid;
     grid-template-rows: 5fr 2fr;
     align-items: center;

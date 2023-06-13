@@ -1,10 +1,10 @@
 #mobile-stage-button {
     margin-top: 5%;
     display: none;
-    font-size: 4rem;
+    font-size: 3.75rem;
     letter-spacing: 10px;
     height: 14%;
-    width: 100%;
+    width: 95%;
     align-self: center;
     opacity: 0.9;
     border:2px solid #18ab29;
@@ -13,7 +13,6 @@
     background-color: #1AB26B;
     color: white;
     padding-left: 5%;
-    padding-bottom: 5%;
     cursor: pointer;
 }
 
@@ -33,13 +32,16 @@
     background-color: #24A86A;
     border:2px solid #44c767;
     box-shadow: 0 0 0 darkgray;
+    position: relative;
+    top: 1px;
 }
 
 @media only screen and (max-width: 1760px){
     #mobile-stage-button {
+        font-size: 3.5rem;
         height: 11%;
-        text-align: center;
-        border-radius: 8% 8% 35% 35%;
-        padding-right: 5%;
+        align-self: center;
+        border-radius: 4% / 40%;
+        padding-right: 0;
     }
 }

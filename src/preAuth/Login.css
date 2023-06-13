@@ -3,11 +3,12 @@
     min-height: 100vh;
     width: auto;
     display: grid;
-    gap: 10%;
+    grid-auto-rows: 3fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
 
 #title-div {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -15,11 +16,9 @@
 }
 
 #button-div {
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
     border-radius: 5% / 25%;
 }
 
@@ -90,6 +89,29 @@ h3 {
     box-shadow: 0 0 0 darkgray;
 }
 
+@media only screen and (min-width: 820px) and (max-width: 1760px){
+    #title {
+        font-size: 80px;
+    }
+    h3 {
+        font-size: 0.9rem
+    }
+    #title-spotify {
+        width: 12%;
+    }
+}
 
-.btn-spotify:active {
+@media only screen and (max-width: 819px){
+    #title {
+        font-size: 60px;
+    }
+    h3 {
+        font-size: 0.8rem
+    }
+    #title-spotify {
+        width: 18%;
+    }
+    .login-button {
+        padding:8px 20px;
+    }
 }
