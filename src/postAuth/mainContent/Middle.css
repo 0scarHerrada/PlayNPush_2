@@ -1,10 +1,9 @@
 #middle {
-    max-height: 900px;
     height: 95%;
     width: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     justify-self: center;
 }
 

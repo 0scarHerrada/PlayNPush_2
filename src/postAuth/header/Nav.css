@@ -56,19 +56,18 @@ ul #nb-1 span , ul #nb-2 span {
 #profile-container {
     display: flex;
     flex-direction: column;
-    padding: 2%;
+    padding: 1%;
+    justify-content: center;
     align-items: center;
 }
 
 #profile-container img {
-    min-width: 100px;
-    max-width: 55%;
+    min-width: 100%;
     height: auto;
     display: block;
     border-radius: 50%;
     border:3px solid #1AB26B;
     box-shadow: 0 0 15px darkgray;
-    margin-bottom: -4%;
 }
 
 
