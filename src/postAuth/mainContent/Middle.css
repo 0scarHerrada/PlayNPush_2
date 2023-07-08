@@ -1,4 +1,5 @@
 #middle {
+    max-height: 900px;
     height: 95%;
     width: 95%;
     display: flex;

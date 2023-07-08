@@ -37,23 +37,9 @@ a:hover {
     font-size: 1.75rem;
 }
 
-a:active {
-    text-decoration: none;
-    font-size: 1.25rem;
-    text-shadow: 0 0 1px #18ab29, 0 0 1px #18ab29;
-}
-
 ul #nb-1 span , ul #nb-2 span {
-    cursor: default;
+    cursor: pointer;
     font-size: 3.25rem;
-}
-
-ul #nb-1 span:hover , ul #nb-2 span:hover {
-    font-size: 3.75rem;
-}
-
-ul #nb-1 span:active , ul #nb-2 span:active {
-    font-size: 2.75rem;
 }
 
 #displayName {
@@ -75,6 +61,7 @@ ul #nb-1 span:active , ul #nb-2 span:active {
 }
 
 #profile-container img {
+    min-width: 100px;
     max-width: 55%;
     height: auto;
     display: block;
@@ -99,16 +86,6 @@ ul #nb-1 span:active , ul #nb-2 span:active {
     justify-self: center;
 }
 
-.spotify:hover {
-    height: 60%;
-    width: 60%;
-}
-
-.spotify:active {
-    height: 50%;
-    width: 50%;
-}
-
 .spotify img {
     max-width: 80%;
     height: auto;
@@ -120,16 +97,6 @@ ul #nb-1 span:active , ul #nb-2 span:active {
     width: 50%;
     overflow: hidden;
     justify-self: center;
-}
-
-.github:hover {
-    height: 55%;
-    width: 55%;
-}
-
-.github:active {
-    height: 45%;
-    width: 45%;
 }
 
 .github img {
